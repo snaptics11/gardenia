@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- favicon -->
+    <link rel="icon" href="./images/Gardenia Logo 2.png" type="image/x-icon">
+    <title>Gardenia Developers Navbar</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <style>
+        /* Top Bar */
+        .top-bar {
+            background-color: #0F6939;
+            color: white;
+            padding: 10px;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .top-bar a {
+            color: white;
+            text-decoration: none;
+        }
+
+        /* Navbar */
+        .navbar {
+            background-color: white;
+            padding: 10px 20px;
+        }
+
+        .navbar-brand img {
+            height: 70px;
+            width: 100px;
+            object-fit: contain;
+        }
+
+        .nav-link {
+            color: black !important;
+            font-weight: 500;
+        }
+
+        .nav-link:hover {
+            color: #0F6939 !important;
+        }
+
+        .nav-link.active {
+            color: #0F6939 !important;
+            border-bottom: 3px solid #0F6939;
+        }
+
+        .enquiry-btn {
+            background-color: #0B9444;
+            color: white;
+            padding: 8px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            border-radius: 0 !important;
+            width: 160px;
+            text-align: center;
+        }
+
+        .enquiry-btn:hover {
+            background-color: #0F6939;
+        }
+
+        .stats-number {
+            font-size: 56px;
+            font-weight: bold;
+            color: #0f6939;
+            margin-top: 5px;
+        }
+
+        .glimpse-slider {
+            width: 100%;
+        }
+
+        .glimpse-card {
+            width: 100%;
+            height: 300px;
+        }
+
+        .glimpse-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .aboutUsBanner {
+            background-image: url(./images/bannerimage.webp);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            position: relative;
+            color: #000;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-block: 70px;
+        }
+
+        .bannerOverlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(209, 209, 209, 0.3);
+            /* Adjust transparency */
+            z-index: 1;
+            /* Keep it below content */
+        }
+
+        .aboutBannerText {
+            position: relative;
+            z-index: 2;
+            width: 80%;
+            margin: auto;
+            /* Ensure text appears above overlay */
+        }
+
+        .aboutBannerText h1 {
+            font-weight: 700;
+            font-size: 56px;
+            padding-bottom: 15px;
+        }
+
+        .aboutBannerText h2 {
+            font-size: 30px;
+            font-weight: 600;
+            padding-bottom: 20px;
+        }
+
+        .aboutBannerImage {
+            position: relative;
+            z-index: 2;
+            width: 70%;
+            height: 500px;
+            margin: auto;
+        }
+
+        .aboutBannerImage img {
+            width: 100%;
+            height: 100%;
+            border-radius: 15px;
+        }
+
+        .aboutBannerText a {
+            margin-top: 40px;
+            display: block;
+            width: fit-content;
+        }
+
+        .specialisationParent {
+            background-size: cover;
+            background-repeat: no-repeat;
+            padding-block: 70px;
+        }
+
+        .specialisationTitle {
+            padding-bottom: 50px;
+        }
+
+        .specialisationTitle p {
+            font-size: 18px;
+        }
+
+        @media screen and (max-width:991px) {
+            .aboutUsBanner {
+                height: fit-content;
+                padding-block: 45px;
+            }
+
+            .aboutBannerText h1 {
+                font-size: 34px;
+            }
+
+            .aboutBannerText h2 {
+                font-size: 26px;
+            }
+
+            .aboutBannerImage {
+                position: relative;
+                z-index: 2;
+                width: 100%;
+                height: 100%;
+                margin: 30px auto 0 auto;
+            }
+
+            .aboutBannerImage img {
+                border-radius: 0;
+            }
+
+            .specialisationTitle {
+                padding-bottom: 40px;
+            }
+
+            .specialisationParent .col-12 {
+                margin-bottom: 30px;
+            }
+
+            .aboutBannerText {
+                width: 90%;
+                margin: auto;
+            }
+
+
+
+
+        }
+
+        @media (max-width: 576px) {
+            .glimpse-slider {
+                max-width: 100%;
+                overflow: hidden;
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 991px) {
+            .stats-number {
+                font-size: 30px;
+                font-weight: bold;
+                color: #0f6939;
+                margin-top: 5px;
+            }
+
+            .top-bar {
+                text-align: center;
+            }
+
+            .enquiry-btn {
+                display: block;
+                text-align: center;
+                margin-top: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Top Bar -->
+    <div class="top-bar ">
+        <div class="container d-flex justify-content-between align-items-center px-5">
+            <span>Email ID : <a target="_blank" href="mailto:abc@gmail.com">abc@gmail.com</a></span>
+            <span class="d-flex justify-content-between align-items-center gap-3">Follow Us :
+                <div class="d-flex justify-content-between align-items-center gap-3">
+                    <a target="_blank" href="#"><i class="fab fa-facebook"></i></a>
+                    <a target="_blank" href="#"><i class="fab fa-instagram"></i></a>
+                    <a target="_blank" href="#"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </span>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-lg px-5">
+            <!-- Logo -->
+            <a class="navbar-brand" href="index.html">
+                <img src="./images/Gardenia Logo 2.png" alt="Gardenia Developers">
+            </a>
+
+            <!-- Toggle Button for Mobile -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Menu Items -->
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link " href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="about.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="blogs.html">Blogs</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+                </ul>
+            </div>
+
+            <!-- Enquiry Button -->
+            <a href="#" class="enquiry-btn d-none d-lg-block">Enquiry</a>
+        </div>
+    </nav>
+
+
+
+    <main>
+        <div class="aboutUsBanner">
+            <div class="bannerOverlay">
+
+            </div>
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <div class="aboutBannerText">
+                            <h1>Gardenia Developers</h1>
+                            <h2>Reinforcing Dreams, Building Trust</h2>
+                            <p>The Group has been synonymous with excellence in high-end residential developments at
+                                most prestigious locations in and around Hyderabad.</p>
+                            <a style="text-decoration: none;" href="#" class="more-details-btn "> More Details
+                                <span><i class="fas fa-leaf leaf-icon"></i></span>
+                            </a>
+                        </div>
+
+                    </div>
+                    <div class="col-md-6">
+                        <div class="aboutBannerImage">
+                            <img src="./images/section1.png" alt="">
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+        <!-- Our Specialization section start-->
+        <div class="specialisationParent mt-5"
+            style="background-image: url(https://img.freepik.com/free-vector/low-poly-white-background-design_1017-33204.jpg);">
+            <div class="specialisationTitle">
+                <h3 class="project-title">Our Specialization</h3>
+                <p class="text-center">Everybody dreams about a home and this is the right time to pitch in, YES..
+                    owning a piece of land at
+                    Hyderabad.</p>
+            </div>
+            <!-- Statistics Section -->
+            <div class="container">
+                <div class="row align-items-center justify-content-center p-0 m-0">
+                    <!-- Industry Experience -->
+                    <div class="col-12 col-md-3 stats-item">
+                        <div class="d-flex align-items-center gap-3 mb-3">
+                            <img src="./images/stat2.png" alt="">
+                            <div class="stats-number">10 +</div>
+                        </div>
+                        <div class="stats-label">Years Of Experience</div>
+                    </div>
+                    <div class="col-12 col-md-3 stats-item">
+                        <div class="d-flex align-items-center gap-3 mb-3">
+                            <img src="./images/stat3.png" alt="">
+                            <div class="stats-number">30 + </div>
+                        </div>
+                        <div class="stats-label">Projects Completed</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Our Specialization section end -->
+
+        <!-- Glimpse section -->
+        <section class="glimpse-section py-5">
+            <div class="container">
+                <h2 class="text-center fw-bold text-success">Glimpse of Our Projects</h2>
+                <p class="text-center pb-5"><b>Our Projects</b> </p>
+
+                <div class="swiper glimpse-slider">
+                    <div class="swiper-wrapper pb-5">
+                        <!-- Glimpse Slide 1 -->
+                        <div class="swiper-slide glimpse-card">
+                            <img src="./images/bannerimage.webp" alt="Glimpse 1">
+                        </div>
+
+                        <!-- Glimpse Slide 2 -->
+                        <div class="swiper-slide glimpse-card">
+                            <img src="./images/banner-home.png" alt="Glimpse 2">
+                        </div>
+
+                        <!-- Glimpse Slide 3 -->
+                        <div class="swiper-slide glimpse-card">
+                            <img src="./images/Rectangle 11.png" alt="Glimpse 3">
+                        </div>
+                        <!-- Glimpse Slide 3 -->
+                        <div class="swiper-slide glimpse-card">
+                            <img src="./images/Rectangle 11.png" alt="Glimpse 3">
+                        </div>
+                        <!-- Glimpse Slide 2 -->
+                        <div class="swiper-slide glimpse-card">
+                            <img src="./images/banner-home.png" alt="Glimpse 2">
+                        </div>
+                        <!-- Add More Slides If Needed -->
+                    </div>
+                    <div class="swiper-pagination glimpse-pagination"></div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- mission vision section start -->
+        <div class="aboutUsBanner"
+            style="background-image: url('https://t4.ftcdn.net/jpg/05/99/77/97/360_F_599779798_lVBxu28675GtqDRBrDqAbtCoURMEDBND.jpg  ');">
+            <div class="bannerOverlay">
+            </div>
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <div class="aboutBannerText">
+                            <h1>Vision & Mission</h1>
+                            <h2>We stick to our mission to create landmark layouts by</h2>
+                            <ul>
+                                <li>Use of approved layout plans from DTCP, HMDA etc…</li>
+                                <li>Maintain transparency and legacy, creating layouts in areas that are well developed.
+                                </li>
+                                <li>Maintain safety and providing convenient lifestyle Completing projects on time.</li>
+                                <li>Enhance good returns for the investments of the customers. Friendly staff and office
+                                    environment.</li>
+                            </ul>
+                            <p>The Group has been synonymous with excellence in high-end residential developments at
+                                most prestigious locations in and around Hyderabad.</p>
+                            <!-- <a style="text-decoration: none;" href="#" class="more-details-btn "> More Details
+                                <span><i class="fas fa-leaf leaf-icon"></i></span>
+                            </a> -->
+                        </div>
+
+                    </div>
+                    <div class="col-md-6">
+                        <div class="aboutBannerImage">
+                            <img src="https://greenmetroinfra.com/wp-content/uploads/2024/06/spire-1024x837-1.jpg"
+                                alt="">
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- mission vision section ends -->
+
+        <!-- About Us Section -->
+
+        <section class="reviews-section py-5">
+            <div class="container">
+                <h2 class="text-center fw-bold text-success">Testimonials</h2>
+                <p class="text-center pb-5"><b>Our Customer Words</b> </p>
+
+                <div class="swiper reviews-slider">
+                    <div class="swiper-wrapper pb-5">
+                        <!-- Review Slide 1 -->
+                        <div class="swiper-slide review-card">
+                            <div class="review-content">
+                                <div class="quote-icon">❝</div>
+                                <p>Best real estate company for the investment purpose in approvals layouts with
+                                    fabulous
+                                    offer of the company</p>
+                                <div class="review-author">
+                                    <img src="./images/author1.png" alt="User Image">
+                                    <div>
+                                        <h6>Sandeep Kaveri</h6>
+                                        <p>Beeramguda, Hyderabad</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Review Slide 2 -->
+                        <div class="swiper-slide review-card">
+                            <div class="review-content">
+                                <div class="quote-icon">❝</div>
+                                <p>Best real estate company for the investment purpose in approvals layouts with
+                                    fabulous
+                                    offer of the company</p>
+                                <div class="review-author">
+                                    <img src="./images/author1.png" alt="User Image">
+                                    <div>
+                                        <h6>Ravi Kumar</h6>
+                                        <p>Gachibowli, Hyderabad</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Review Slide 2 -->
+                        <div class="swiper-slide review-card">
+                            <div class="review-content">
+                                <div class="quote-icon">❝</div>
+                                <p>Best real estate company for the investment purpose in approvals layouts with
+                                    fabulous
+                                    offer of the company</p>
+                                <div class="review-author">
+                                    <img src="./images/author1.png" alt="User Image">
+                                    <div>
+                                        <h6>Ravi Kumar</h6>
+                                        <p>Gachibowli, Hyderabad</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Add More Slides If Needed -->
+                    </div>
+
+                    <!-- Swiper Pagination & Navigation -->
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Statistics Section -->
+        <div class="container stats-section ">
+            <div class="row align-items-center justify-content-center p-0 m-0">
+                <!-- Industry Experience -->
+                <div class="col-12 col-md-3 stats-item">
+                    <div class="d-flex align-items-center gap-3 mb-3">
+                        <img src="./images/stat1.png" alt="">
+                        <div class="stats-number">2 <sup>Million</sup></div>
+                    </div>
+                    <div class="stats-label">SQ Yds Sold</div>
+                </div>
+                <!-- Before Image -->
+                <div class="col-md-1 d-none d-md-block text-center">
+                    <img src="./images/shape1.png" alt="Before" class="stats-image">
+                </div>
+                <!-- Acres Crafted -->
+                <div class="col-12 col-md-3 stats-item">
+                    <div class="d-flex align-items-center gap-3 mb-3">
+                        <img src="./images/stat2.png" alt="">
+                        <div class="stats-number">1 <sup>#</sup></div>
+                    </div>
+                    <div class="stats-label">Fastest growing brands in india 2019-2020</div>
+                </div>
+                <!-- After Image -->
+                <div class="col-md-1 d-none d-md-block text-center">
+                    <img src="./images/shape2.png" alt="After" class="stats-image">
+                </div>
+                <!-- Happy Customers -->
+                <div class="col-12 col-md-3 stats-item">
+                    <div class="d-flex align-items-center gap-3 mb-3">
+                        <img src="./images/stat3.png" alt="">
+                        <div class="stats-number">5 <sup>K+</sup></div>
+                    </div>
+                    <div class="stats-label">Happy Clients</div>
+                </div>
+
+
+            </div>
+        </div>
+        <footer class="footer mt-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-2">
+                        <div class="footer-logo-section">
+                            <div class="footer-logo">
+                                <img src="./images/Gardenia Logo 2.png" alt="">
+                            </div>
+                            <p class="py-1 mt-2">Follow Us:</p>
+                            <div class="social-icons">
+                                <a href="#"><i class="fab fa-facebook"></i></a>
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                                <a href="#"><i class="fab fa-linkedin"></i></a>
+                                <a href="#"><i class="fab fa-youtube"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="footer-Address">
+                            <h5>Address</h5>
+                            <div class="d-flex gap-2">
+                                <i class="fa-solid fa-location-dot mt-2"></i>
+                                <p class="mt-1"> Lorem ipsum dolor sit amet consectetur.
+                                    Id nullam aenean nunc
+                                    interdum amet.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-2 FooterLinks">
+                        <h5>Sitemap Links</h5>
+                        <p><a href="index.html">Home</a></p>
+                        <p><a href="about.html">About Us</a></p>
+                        <p><a href="projects.html">Projects</a></p>
+                        <p><a href="blogs.html">Blogs</a></p>
+                        <p><a href="contact.html">Contact</a></p>
+                    </div>
+                    <div class="col-md-2 FooterLinks">
+                        <h5>Ongoing Projects</h5>
+                        <p><a href="#">Project 1</a></p>
+                        <p><a href="#">Project 2</a></p>
+                        <p><a href="#">Project 3</a></p>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="contactCardParent">
+                            <div class="contact-card">
+                                <div class="icon1">
+                                    <i class="fas fa-phone"></i>
+                                </div>
+                                <div class="contactInfo">
+                                    <p>+91 12345 67890</p>
+                                    <p class="name">SANJEEV KUMAR</p>
+                                </div>
+                            </div>
+
+                            <div class="contact-card">
+                                <div class=" emailIcon">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div class="contactInfo emailSection">
+                                    <p>EMAIL ID</p>
+                                    <p class="name">abc@gmail.com</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br><br>
+                <div class="text-center copyrightSection">
+                    <p>Copyright &copy;2024 GARDENIA DEVELOPERS. All Rights Reserved</p>
+                </div>
+            </div>
+        </footer>
+    </main>
+
+
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const swiper = new Swiper('.mySwiper', {
+                loop: true,
+                autoplay: {
+                    delay: 2000,
+                },
+                navigation: {
+                    nextEl: '.swiper-button-next-custom',
+                    prevEl: '.swiper-button-prev-custom'
+                },
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                },
+                keyboard: true,
+                // mousewheel: true,
+            });
+        });
+        document.addEventListener("DOMContentLoaded", function () {
+            new Swiper(".reviews-slider", {
+                loop: true,
+                spaceBetween: 20,
+                slidesPerView: 1, // Default to 1 slide for mobile
+                autoplay: {
+                    delay: 4000,
+                },
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                },
+                breakpoints: {
+                    576: { slidesPerView: 1 }, // Small screens (phones)
+                    768: { slidesPerView: 1 }, // Tablets
+                    1024: { slidesPerView: 2 }, // Small laptops
+                    1200: { slidesPerView: 2 }, // Desktops
+                }
+            });
+        });
+
+        document.addEventListener("DOMContentLoaded", function () {
+            new Swiper(".glimpse-slider", {
+                loop: true,
+                spaceBetween: 20,
+                slidesPerView: 1, // Default to 1 for mobile
+                autoplay: {
+                    delay: 3000,
+                },
+                pagination: {
+                    el: ".glimpse-pagination",
+                    clickable: true,
+                },
+                breakpoints: {
+                    576: { slidesPerView: 1 }, // Mobile: 1 slide
+                    768: { slidesPerView: 3 }, // Tablet: 2 slides
+                    1024: { slidesPerView: 4 }, // Desktop: 3 slides
+                }
+            });
+        });
+
+
+
+    </script>
+
+
+</body>
+
+</html>
