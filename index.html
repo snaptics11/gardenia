@@ -185,7 +185,7 @@
             </div>
 
             <!-- Enquiry Button -->
-            <a href="#" class="enquiry-btn d-none d-lg-block">Enquiry</a>
+            <a href="contact.html" class="enquiry-btn d-none d-lg-block">Enquiry</a>
         </div>
     </nav>
 
@@ -221,8 +221,6 @@
         <!-- Statistics Section -->
         <div class="container stats-section">
             <div class="row align-items-center justify-content-center p-0 m-0">
-
-
                 <!-- Industry Experience -->
                 <div class="col-12 col-md-3 stats-item">
                     <div class="d-flex align-items-center gap-3 mb-3">
@@ -255,8 +253,6 @@
                     </div>
                     <div class="stats-label">HAPPY CUSTOMERS</div>
                 </div>
-
-
             </div>
         </div>
 
@@ -307,7 +303,7 @@
                                 </div>
                             </div>
 
-                            <a href="#" class="btn-green">Know More
+                            <a href="about.html" class="btn-green">Know More
                                 <span><i class="fas fa-leaf leaf-icon"></i></span>
                             </a>
 
@@ -569,7 +565,7 @@
                 <h2 class="project-title">Get Consultation</h2>
                 <h3> <span>Lorem ipsum </span> dolor sit amet consectetur. Id nullam aenean
                     nunc interdum <span> amet Commodo</span></h3>
-                <a href="#" class="knowmore">Know More
+                <a href="contact.html" class="knowmore">Know More
                     <i class="fas fa-leaf leaf-icon"></i>
                 </a>
             </div>
@@ -683,6 +679,7 @@
                 <h2 class="project-title py-5 ">Blogs</h2>
                 <div class="row">
                     <div class="col-md-4">
+                       <a href="blogs.html" style="text-decoration: none;color: #000;">
                         <div class="BlogsCard">
                             <img src="./images/blog1.png" alt="">
                             <div class="blogText">
@@ -691,18 +688,22 @@
                                 <i class="fas fa-leaf leaf-icon"></i>
                             </div>
                         </div>
+                       </a>
                     </div>
                     <div class="col-md-4">
-                        <div class="BlogsCard">
-                            <img src="./images/blog2.png" alt="">
-                            <div class="blogText">
-                                <p>Lorem ipsum dolor sit amet consectetur. Id nullam aenean nunc
-                                    interdum amet.</p>
-                                <i class="fas fa-leaf leaf-icon"></i>
+                        <a href="blogs.html" style="text-decoration: none;color: #000;">
+                            <div class="BlogsCard">
+                                <img src="./images/blog2.png" alt="">
+                                <div class="blogText">
+                                    <p>Lorem ipsum dolor sit amet consectetur. Id nullam aenean nunc
+                                        interdum amet.</p>
+                                    <i class="fas fa-leaf leaf-icon"></i>
+                                </div>
                             </div>
-                        </div>
+                        </a>
                     </div>
                     <div class="col-md-4">
+                       <a href="blogs.html" style="text-decoration: none;color: #000;">
                         <div class="BlogsCard">
                             <img src="./images/blog3.png" alt="">
                             <div class="blogText">
@@ -711,6 +712,7 @@
                                 <i class="fas fa-leaf leaf-icon"></i>
                             </div>
                         </div>
+                       </a>
                     </div>
                 </div>
             </div>
@@ -848,6 +850,52 @@
                 navbar.classList.remove("fixed");
             }
         });
+
+        document.addEventListener("DOMContentLoaded", function () {
+    function animateCounter(element, start, end, duration) {
+        let startTime = null;
+        function step(timestamp) {
+            if (!startTime) startTime = timestamp;
+            let progress = Math.min((timestamp - startTime) / duration, 1);
+            element.innerText = Math.floor(progress * (end - start) + start);
+            if (progress < 1) {
+                requestAnimationFrame(step);
+            } else {
+                element.innerText = end + "+"; // Ensuring final value has a plus sign if applicable
+            }
+        }
+        requestAnimationFrame(step);
+    }
+
+    function startCounters() {
+        let counters = document.querySelectorAll(".stats-number");
+        let values = [25, 2000, 10000]; // Target values for each counter
+        counters.forEach((counter, index) => {
+            animateCounter(counter, 0, values[index], 2000);
+        });
+    }
+
+    function isElementInViewport(el) {
+        let rect = el.getBoundingClientRect();
+        return (
+            rect.top >= 0 &&
+            rect.left >= 0 &&
+            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+            rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+        );
+    }
+
+    function checkCounters() {
+        let statsSection = document.querySelector(".row"); // Adjust selector if needed
+        if (isElementInViewport(statsSection)) {
+            startCounters();
+            window.removeEventListener("scroll", checkCounters);
+        }
+    }
+
+    window.addEventListener("scroll", checkCounters);
+    checkCounters();
+});
     </script>
 
 
