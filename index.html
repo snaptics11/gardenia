@@ -99,6 +99,13 @@
             border-right: 2px solid white;
         }
 
+        .navbar {
+            transition: all 0.4s ease-in-out;
+        }
+
+     
+
+
         /* Marquee Animation */
         @keyframes marquee {
             from {
@@ -112,6 +119,7 @@
 
         /* Responsive */
         @media (max-width: 991px) {
+          
             .top-bar {
                 text-align: center;
             }
@@ -153,14 +161,24 @@
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
-
             <!-- Menu Items -->
             <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
-                    <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
-                    <li class="nav-item"><a class="nav-link" href="blogs.html">Blogs</a></li>
+
+                    <!-- Dropdown for Projects -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown">
+                            Projects
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="Rajapur.html">Rajapur</a></li>
+                            <li><a class="dropdown-item" href="Mudireddypally.html">Mudireddypally</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item"><a class="nav-link " href="blogs.html">Blogs</a></li>
                     <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
                     <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
                 </ul>
@@ -171,7 +189,6 @@
         </div>
     </nav>
 
-    <!-- Marquee Section -->
     <!-- Marquee Section -->
     <div class="marquee">
         <div class="marquee-content">
@@ -350,7 +367,7 @@
         <section class="projects-section">
             <div class="ProjectsHeading">
                 <h2 class="project-title">Projects</h2>
-                <a href="#" class="text-decoration-none text-success">View All</a>
+                <a href="Rajapur.html" class="text-decoration-none text-success">View All</a>
             </div>
             <div class="row mainrow p-0 m-0 align-items-end">
                 <div class="col-lg-6 p-0">
@@ -412,7 +429,7 @@
                         </div>
                         <div class="d-flex gap-3 justify-content-end align-items-center">
                             <p class="text-white">2 BHK: 1275 SFT, 3 BHK: 1535 SFT & 1675 SFT</p>
-                            <a style="text-decoration: none;" href="#" class="more-details-btn"> More Details
+                            <a style="text-decoration: none;" href="Rajapur.html" class="more-details-btn"> More Details
                                 <span><i class="fas fa-leaf leaf-icon"></i></span>
                             </a>
 
@@ -479,7 +496,8 @@
                         </div>
                         <div class="d-flex gap-3 justify-content-end align-items-center">
                             <p class=" text-white">2 BHK: 1275 SFT, 3 BHK: 1535 SFT & 1675 SFT</p>
-                            <a style="text-decoration: none;" href="#" class="more-details-btn"> More Details
+                            <a style="text-decoration: none;" href="Mudireddypally.html" class="more-details-btn"> More
+                                Details
                                 <span><i class="fas fa-leaf leaf-icon"></i></span>
                             </a>
 
@@ -563,7 +581,7 @@
                 <div class="col-lg-6 p-0">
                     <img src="./images/form-image.png" alt="Family Image" class="formImage" style="object-fit: cover;">
                 </div>
-    
+
                 <!-- Contact Form Section -->
                 <div class="col-lg-6 p-0 ">
                     <div class="contact-content">
@@ -581,7 +599,7 @@
                                 <input type="tel" placeholder="Phone Number" required>
                             </div>
                             <textarea rows="4" placeholder="Message" required></textarea>
-    
+
                             <button type="submit" class="more-details-btn w-100 text-center">
                                 Send <span><i class="fas fa-leaf leaf-icon"></i></span>
                             </button>
@@ -590,21 +608,22 @@
                 </div>
             </div>
         </section>
-    
-    
-    
+
+
+
         <section class="reviews-section py-5">
             <div class="container">
                 <h2 class="text-center fw-bold text-success">Testimonials</h2>
                 <p class="text-center pb-5"><b>Our Customer Words</b> </p>
-    
+
                 <div class="swiper reviews-slider">
                     <div class="swiper-wrapper pb-5">
                         <!-- Review Slide 1 -->
                         <div class="swiper-slide review-card">
                             <div class="review-content">
                                 <div class="quote-icon">❝</div>
-                                <p>Best real estate company for the investment purpose in approvals layouts with fabulous
+                                <p>Best real estate company for the investment purpose in approvals layouts with
+                                    fabulous
                                     offer of the company</p>
                                 <div class="review-author">
                                     <img src="./images/author1.png" alt="User Image">
@@ -615,12 +634,13 @@
                                 </div>
                             </div>
                         </div>
-    
+
                         <!-- Review Slide 2 -->
                         <div class="swiper-slide review-card">
                             <div class="review-content">
                                 <div class="quote-icon">❝</div>
-                                <p>Best real estate company for the investment purpose in approvals layouts with fabulous
+                                <p>Best real estate company for the investment purpose in approvals layouts with
+                                    fabulous
                                     offer of the company</p>
                                 <div class="review-author">
                                     <img src="./images/author1.png" alt="User Image">
@@ -635,7 +655,8 @@
                         <div class="swiper-slide review-card">
                             <div class="review-content">
                                 <div class="quote-icon">❝</div>
-                                <p>Best real estate company for the investment purpose in approvals layouts with fabulous
+                                <p>Best real estate company for the investment purpose in approvals layouts with
+                                    fabulous
                                     offer of the company</p>
                                 <div class="review-author">
                                     <img src="./images/author1.png" alt="User Image">
@@ -646,16 +667,16 @@
                                 </div>
                             </div>
                         </div>
-    
+
                         <!-- Add More Slides If Needed -->
                     </div>
-    
+
                     <!-- Swiper Pagination & Navigation -->
                     <div class="swiper-pagination"></div>
                 </div>
             </div>
         </section>
-    
+
         <!-- blogs section start-->
         <section class="blogSectionParent">
             <div class="container-lg">
@@ -693,14 +714,14 @@
                     </div>
                 </div>
             </div>
-    
+
         </section>
         <!-- blogs section end-->
-    
+
         <footer class="footer">
-            <div class="container">
+            <div class="container-lg">
                 <div class="row">
-                    <div class="col-md-2">
+                    <div class="col-md-12  col-lg-2">
                         <div class="footer-logo-section">
                             <div class="footer-logo">
                                 <img src="./images/Gardenia Logo 2.png" alt="">
@@ -714,7 +735,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-3">
+                    <div class="col-md-6 col-lg-3">
                         <div class="footer-Address">
                             <h5>Address</h5>
                             <div class="d-flex gap-2">
@@ -725,21 +746,20 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-2 FooterLinks">
+                    <div class="col-md-6 col-lg-2 FooterLinks">
                         <h5>Sitemap Links</h5>
                         <p><a href="index.html">Home</a></p>
                         <p><a href="about.html">About Us</a></p>
-                        <p><a href="projects.html">Projects</a></p>
+                        <p><a href="Rajapur.html">Projects</a></p>
                         <p><a href="blogs.html">Blogs</a></p>
                         <p><a href="contact.html">Contact</a></p>
                     </div>
-                    <div class="col-md-2 FooterLinks">
+                    <div class="col-md-6 col-lg-2 FooterLinks">
                         <h5>Ongoing Projects</h5>
-                        <p><a href="#">Project 1</a></p>
-                        <p><a href="#">Project 2</a></p>
-                        <p><a href="#">Project 3</a></p>
+                        <p><a href="Rajapur.html">Rajapur</a></p>
+                        <p><a href="Mudireddypally.html">Mudireddypally</a></p>
                     </div>
-                    <div class="col-md-3">
+                    <div class="col-md-6 col-lg-3">
                         <div class="contactCardParent">
                             <div class="contact-card">
                                 <div class="icon1">
@@ -750,7 +770,7 @@
                                     <p class="name">SANJEEV KUMAR</p>
                                 </div>
                             </div>
-    
+
                             <div class="contact-card">
                                 <div class=" emailIcon">
                                     <i class="fas fa-envelope"></i>
@@ -818,6 +838,16 @@
 
 
 
+    </script>
+    <script>
+        window.addEventListener("scroll", function () {
+            let navbar = document.querySelector(".navbar");
+            if (window.scrollY > 50) {
+                navbar.classList.add("fixed");
+            } else {
+                navbar.classList.remove("fixed");
+            }
+        });
     </script>
 
 

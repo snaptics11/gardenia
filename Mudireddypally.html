@@ -1,0 +1,1365 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- favicon -->
+    <link rel="icon" href="./images/Gardenia Logo 2.png" type="image/x-icon">
+    <title>Gardenia Developers Navbar</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <style>
+        /* Top Bar */
+        .top-bar {
+            background-color: #0F6939;
+            color: white;
+            padding: 10px;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .top-bar a {
+            color: white;
+            text-decoration: none;
+        }
+
+        /* Navbar */
+        .navbar {
+            background-color: white;
+            padding: 10px 20px;
+        }
+
+        .navbar-brand img {
+            height: 70px;
+            width: 100px;
+            object-fit: contain;
+        }
+
+        .nav-link {
+            color: black !important;
+            font-weight: 500;
+        }
+
+        .nav-link:hover {
+            color: #0F6939 !important;
+        }
+
+        .nav-link.active {
+            color: #0F6939 !important;
+            border-bottom: 3px solid #0F6939;
+        }
+
+        .enquiry-btn {
+            background-color: #0B9444;
+            color: white;
+            padding: 8px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            border-radius: 0 !important;
+            width: 160px;
+            text-align: center;
+        }
+        .overlay-content .enquiry-btn{
+            margin: auto;
+        }
+
+        .enquiry-btn:hover {
+            background-color: #0F6939;
+        }
+
+        .stats-number {
+            font-size: 56px;
+            font-weight: bold;
+            color: #0f6939;
+            margin-top: 5px;
+        }
+
+        .projectsBanner {
+            background: url(https://sezcounty.com/wp-content/uploads/2024/03/close-up-green-bush_1162-53.jpg);
+            /* height: 85vh; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-block: 90px;
+        }
+
+        .project-info-box {
+            background: rgba(0, 0, 0, 0.6);
+            color: #fff;
+            padding: 30px;
+            border-radius: 15px;
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+
+        }
+
+        .project-info-box h2 {
+            color: #FFD700;
+            text-transform: uppercase;
+        }
+
+        .features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .features div {
+            flex: 1 1 calc(50% - 15px);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .form-box {
+            background: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            position: relative;
+            width: 80%;
+            margin: auto;
+            border: 4px solid #47cc5c;
+        }
+
+        .form-box input {
+            margin-bottom: 25px !important;
+            border-radius: 0;
+        }
+
+        .form-box h3 {
+            text-align: center;
+            background: #FFD700;
+            width: fit-content;
+            margin: auto;
+            padding: 10px 20px;
+            position: relative;
+            top: -43px;
+            font-weight: 600;
+        }
+
+        .aboutProjectRight a {
+            margin-top: 30px;
+            display: block;
+            width: fit-content;
+        }
+
+        .aboutProjectLeft {
+            position: relative;
+        }
+
+        .aboutProjectLeft img {
+            height: 430px;
+            width: 360px;
+
+        }
+
+        .aboutProjectLeft img:nth-child(1) {
+            position: relative;
+            top: 60px;
+            right: -20px;
+        }
+
+        .aboutProjectRight p {
+            padding-block: 10px;
+        }
+
+        .aboutProjectLeft img:nth-child(2) {
+            right: 35px;
+            position: absolute;
+
+        }
+
+        .projectDetails {
+            padding-block: 100px;
+        }
+
+        .AmenitiesBox img {
+            height: 60px;
+            width: 60px;
+            object-fit: contain;
+        }
+
+        .AmenitiesBox {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+            border-radius: 50px 0 50px 0;
+            background-color: #e7d5b4;
+            gap: 20px;
+            font-weight: 600;
+            margin-bottom: 25px;
+            transition: all 0.3 linear;
+            position: relative;
+            min-height: 160px;
+        }
+
+        .AmenitiesBox p {
+            text-transform: uppercase;
+            font-size: 14px;
+        }
+
+        .AmenitiesBoxAbs {
+            position: absolute;
+            height: 101%;
+            width: 100%;
+            border-radius: 50px 0 50px 0;
+            background-color: #0B9444;
+            bottom: -5px;
+            opacity: 0;
+            z-index: -1;
+            transition: opacity 0.3s linear;
+        }
+
+        .AmenitiesBox:hover .AmenitiesBoxAbs {
+            opacity: 1;
+        }
+
+        .Amenitiesitle {
+            padding-bottom: 60px;
+        }
+
+        .TabsSectionParent .nav-tabs {
+            justify-content: center;
+            border: none;
+        }
+
+        .TabsSectionParent h2 {
+            color: #0b3d28;
+            padding-bottom: 30px;
+        }
+
+        .TabsSectionParent {
+            position: relative;
+            padding-block: 50px;
+            background-color: #f2f2f2;
+        }
+
+        .TabsSectionParent::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url(https://sezcounty.com/wp-content/uploads/2024/02/download-3.png) center/cover no-repeat;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 0;
+            opacity: 0.2;
+        }
+
+        .TabsSectionParent>* {
+            position: relative;
+            z-index: 1;
+        }
+
+
+        .TabsSectionParent .nav-tabs .nav-link {
+            text-align: center;
+            font-weight: bold;
+            padding: 15px;
+            border-radius: 0;
+            color: #fff !important;
+            width: 300px;
+        }
+
+        .TabsSectionParent .nav-tabs .nav-link.active {
+            background-color: #0056b3 !important;
+            color: white !important;
+        }
+
+        .TabsSectionParent .tab-content {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .TabsSectionParent .tab-pane img {
+            width: 60%;
+            height: 100%;
+            border-radius: 8px;
+        }
+
+        .LocationHeighlightsParent {
+            padding-top: 60px;
+        }
+
+        .LocationHeading h5 {
+            color: #0F6939;
+            padding-bottom: 20px;
+        }
+
+        .AmenitiesParent {
+            padding-block: 40px;
+        }
+
+        .LocationHeading {
+            width: 50%;
+            margin: auto;
+            padding-bottom: 35px;
+        }
+
+        .LocationImage {
+            height: 100%;
+            width: 100%;
+            transition: all 0.3s linear;
+        }
+
+        .LocationImage img {
+            height: 100%;
+            width: 100%;
+            object-fit: contain;
+        }
+
+        .LocationImage:hover {
+            transform: scale(1.1);
+        }
+
+        .LocationCard img {
+            height: 70px;
+            width: 70px;
+
+        }
+
+        .LocationCard p {
+            color: #0F6939;
+            text-transform: uppercase;
+        }
+
+        .LocationCard {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            border: 1px solid #e1dfdf;
+            text-align: center;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+        }
+
+        .LocationHeighlightsDesc {
+            position: relative;
+            background-image: url(https://sezcounty.com/wp-content/uploads/2024/02/bg_frame3.png);
+            background-size: 30px auto;
+            padding: 60px;
+        }
+
+        .LocationHeighlightsDesc::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #FFFFFF80;
+            opacity: 1;
+            transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
+            z-index: 1;
+            inset: 0;
+        }
+
+        .LocationHeighlightsDesc .container-lg {
+            position: relative;
+            z-index: 2;
+        }
+
+        .gallery-container {
+            width: 80%;
+            margin: auto;
+            padding: 20px;
+        }
+
+        .unique-gallery-swiper .swiper-slide img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .GalleryParent {
+            padding-block: 50px;
+        }
+
+        .reviews-section {
+            padding: 50px 0;
+        }
+
+        .review-card {
+            border-radius: 15px;
+            padding: 20px;
+            text-align: left;
+            border: none;
+        }
+
+        .review-card p {
+            padding-block: 15px;
+        }
+
+        .ProjectsPage .swiper {
+            box-shadow: 0px 25px 20px 0px rgba(0, 0, 0, 0.1);
+            background-color: #fff !important;
+            border-radius: 25px 25px 0 0;
+            margin-bottom: -50px;
+
+        }
+
+        .Projectquote-icon {
+            height: 40px;
+            width: 55px;
+            position: absolute;
+            left: -60px;
+            top: -20px;
+        }
+
+        .Projectquote-icon img {
+            height: 100%;
+            width: 100%;
+        }
+
+        .star-rating {
+            color: #f5c518;
+            font-size: 30px;
+        }
+
+        .swiper-pagination-bullet-active {
+            background-color: #f5c518;
+        }
+
+        .overlay-section {
+            position: relative;
+            background: url('./images/banner-home.png') no-repeat center center/cover;
+            min-height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+        }
+
+        .overlay-section::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1;
+        }
+
+        .overlay-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .custom-contact-section {
+            padding: 50px 0;
+        }
+
+        .custom-form-container {
+            background: #fff;
+            padding: 30px;
+            /* border-radius: 10px; */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .custom-map-container iframe {
+            width: 100%;
+            height: 100%;
+            /* border-radius: 10px; */
+        }
+
+        .Amenities-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .project-info-box h3 {
+            font-weight: 600;
+        }
+
+        @media (max-width:768px) {
+            .LocationHeighlightsParent .project-title {
+                font-size: 20px;
+            }
+
+            .AmenitiesBox {
+                padding: 15px;
+                min-height: fit-content;
+                min-height: 140px;
+            }
+
+            .LocationHeighlightsDesc {
+                padding: 15px;
+            }
+
+            .AmenitiesBox img {
+                height: 50px;
+                width: 50px;
+            }
+
+
+            .AmenitiesBox p {
+                text-transform: uppercase;
+                font-size: 12px;
+            }
+
+
+            .Amenities-content .col-md-4 {
+                width: 50% !important;
+            }
+
+            .Amenities-content .row>.col-md-4:nth-child(3n) {
+                width: 100% !important;
+            }
+
+
+            .project-info-box h3 {
+                font-size: 20px;
+                font-weight: 600;
+            }
+
+            .projectsBanner {
+                padding-block: 50px;
+            }
+
+            .project-info-box {
+                padding: 20px;
+            }
+
+            .form-box {
+                width: 90%;
+                margin-top: 50px;
+            }
+
+            .form-box h3 {
+                font-size: 18px;
+            }
+
+            .glimpse-slider {
+                max-width: 100%;
+                overflow: hidden;
+            }
+
+            .aboutProjectLeft img:nth-child(1) {
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 375px;
+            }
+
+            .aboutProjectRight {
+                margin-top: 20px;
+                text-align: justify;
+            }
+
+            .TabsSectionParent .nav-tabs .nav-link {
+                width: fit-content;
+            }
+
+            .TabsSectionParent .nav-tabs {
+                justify-content: center;
+                border: none;
+                display: flex;
+                flex-wrap: wrap;
+            }
+
+            .TabsSectionParent .tab-pane img {
+                width: 100%;
+                height: 100%;
+            }
+
+            .LocationHeading {
+                width: 90%;
+                padding-bottom: 0;
+            }
+
+            .GalleryParent {
+                padding-block: 0;
+            }
+
+            .GalleryParent .swiper {
+                padding-block: 0 !important;
+            }
+
+            .ProjectsPage h2 {
+                padding-bottom: 20px;
+            }
+
+            .overlay-content {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+            }
+
+            .custom-contact-section {
+                padding: 50px 0 0 0;
+            }
+
+
+
+            .aboutProjectLeft img:nth-child(2) {
+                bottom: 0;
+                height: 250px;
+                right: 0;
+                /* left: 0; */
+                width: 220px;
+            }
+
+            .projectDetails {
+                padding-block: 50px;
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 991px) {
+            .stats-number {
+                font-size: 30px;
+                font-weight: bold;
+                color: #0f6939;
+                margin-top: 5px;
+            }
+
+            .top-bar {
+                text-align: center;
+            }
+
+            .enquiry-btn {
+                display: block;
+                text-align: center;
+                margin-top: 10px;
+            }
+        }
+
+        
+        @media screen and (min-width:768px) and (max-width:991px) {
+            .aboutProjectLeft img:nth-child(1) {
+                right: 0;
+            }
+            .aboutProjectLeft img:nth-child(2){
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Top Bar -->
+    <div class="top-bar ">
+        <div class="container d-flex justify-content-between align-items-center px-5">
+            <span>Email ID : <a target="_blank" href="mailto:abc@gmail.com">abc@gmail.com</a></span>
+            <span class="d-flex justify-content-between align-items-center gap-3">Follow Us :
+                <div class="d-flex justify-content-between align-items-center gap-3">
+                    <a target="_blank" href="#"><i class="fab fa-facebook"></i></a>
+                    <a target="_blank" href="#"><i class="fab fa-instagram"></i></a>
+                    <a target="_blank" href="#"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </span>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-lg px-5">
+            <!-- Logo -->
+            <a class="navbar-brand" href="index.html">
+                <img src="./images/Gardenia Logo 2.png" alt="Gardenia Developers">
+            </a>
+
+            <!-- Toggle Button for Mobile -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+             <!-- Menu Items -->
+             <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+
+                    <!-- Dropdown for Projects -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="Rajapur.html" id="navbarDropdown">
+                            Projects
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="Rajapur.html">Rajapur</a></li>
+                            <li><a class="dropdown-item" href="Mudireddypally.html">Mudireddypally</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item"><a class="nav-link" href="blogs.html">Blogs</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+                </ul>
+            </div>
+
+            <!-- Enquiry Button -->
+            <a href="#" class="enquiry-btn d-none d-lg-block">Enquiry</a>
+        </div>
+    </nav>
+
+
+
+    <main>
+        <div class="projectsBanner">
+            <div class="container-lg">
+                <div class="col-lg-10 mx-auto">
+                    <div class="row align-items-center">
+                        <div class="col-md-6">
+                            <div class="project-info-box">
+                                <h2><strong>Gardenia Developers</strong></h2>
+                                <p>Welcome To Gardenia Developers: Where Serenity Meets Convenience In Your Dream Home!
+                                </p>
+                                <h3>APPROVED VILLA PLOTS @ Hyderabad Highway</h3>
+                                <p><strong>NEAR POLEPALLY SEZ | 25 ACRES LAYOUT | MUDA APPROVED</strong></p>
+                                <div class="features">
+                                    <div><i class="fa-solid fa-archway"></i> Grand Entrance Arch</div>
+                                    <div><i class="fa-solid fa-tree"></i> Lush Green Central Park</div>
+                                    <div><i class="fa-solid fa-file-contract"></i> Clear Title</div>
+                                    <div><i class="fa-solid fa-road"></i> 40 & 30 Feet BT Roads</div>
+                                    <div><i class="fa-solid fa-compass-drafting"></i> 100% Vastu</div>
+                                    <div><i class="fa-solid fa-leaf"></i> Avenue Plantation</div>
+                                    <div><i class="fa-solid fa-building"></i> Clubhouse</div>
+                                    <div><i class="fa-solid fa-lightbulb"></i> Electricity With Street Lights</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-box">
+                                <h3>Book a free Consultation</h3>
+                                <form>
+                                    <div class="mb-3">
+                                        <label for="name" class="form-label">Name *</label>
+                                        <input type="text" class="form-control" id="name" placeholder="Name">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="mobile" class="form-label">Mobile Number *</label>
+                                        <input type="text" class="form-control" id="mobile" placeholder="Mobile Number">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="location" class="form-label">Location</label>
+                                        <input type="text" class="form-control" id="location" placeholder="Location">
+                                    </div>
+                                    <button type="submit" class="enquiry-btn w-100"
+                                        style="border: none;">SUBMIT</button>
+                                </form>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- about project -->
+        <div class="projectDetails">
+            <div class="container-lg">
+                <div class="col-lg-11 mx-auto">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="aboutProjectLeft">
+                                <img src="https://sezcounty.com/wp-content/uploads/2024/02/Amaravati-Ventures.jpeg"
+                                    alt="">
+                                <img src="https://sezcounty.com/wp-content/uploads/2024/02/bungalow-construction-service-500x500-1.webp"
+                                    alt="">
+
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="aboutProjectRight">
+                                <h4 class="project-title text-start">About Gardenia Developers</h4>
+                                <p>At Sez County, we pride ourselves on crafting more than just homes; we cultivate
+                                    lifestyles. Nestled amidst serene landscapes, our residential enclave promises a
+                                    blend of elegance and convenience. Located just an hour away from the bustling
+                                    metropolis of Hyderabad, we offer a tranquil retreat from the urban hustle, without
+                                    compromising on connectivity.</p>
+                                <p>Our commitment to excellence is reflected in every
+                                    aspect, from meticulously designed layouts to premium amenities. With a focus on
+                                    customer satisfaction, we strive to create a community where residents can truly
+                                    thrive and make cherished memories. Welcome to Sez County, where luxury living meets
+                                    natural splendor.</p>
+                                <a style="text-decoration: none;" href="#" class="more-details-btn "> More Details
+                                    <span><i class="fas fa-leaf leaf-icon"></i></span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- about project end-->
+
+        <!-- Amenities section starts -->
+        <div class="AmenitiesParent reviews-section" style="background-color: #e3ece7;">
+            <div class="Amenitiesitle text-center">
+                <h2 class="project-title">AMENITIES</h2>
+                <p>Unparalleled Amenities, Elevating Your Lifestyle to Extraordinary Heights!</p>
+            </div>
+            <div class="Amenities-content">
+                <div class="container-lg">
+                    <div class="col-lg-11 mx-auto">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="AmenitiesBox">
+                                    <div class="AmenitiesBoxAbs"></div>
+                                    <img src="https://sezcounty.com/wp-content/uploads/2024/02/1865269.png" alt="">
+                                    <p>25 ACRES LAYOUT</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="AmenitiesBox">
+                                    <div class="AmenitiesBoxAbs"></div>
+                                    <img src="https://sezcounty.com/wp-content/uploads/2024/02/12327080.png" alt="">
+                                    <p>MUDA APPROVED LAYOUT</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="AmenitiesBox">
+                                    <div class="AmenitiesBoxAbs"></div>
+                                    <img src="https://sezcounty.com/wp-content/uploads/2024/02/12343308.png" alt="">
+                                    <p>CLEAR TITLE</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="AmenitiesBox">
+                                    <div class="AmenitiesBoxAbs"></div>
+                                    <img src="https://sezcounty.com/wp-content/uploads/2024/02/3243536.png" alt="">
+                                    <p>GRAND ENTRANCE ARCH</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="AmenitiesBox">
+                                    <div class="AmenitiesBoxAbs"></div>
+                                    <img src="https://sezcounty.com/wp-content/uploads/2024/02/8863771.png" alt="">
+                                    <p>100% VASTU</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="AmenitiesBox">
+                                    <div class="AmenitiesBoxAbs"></div>
+                                    <img src="https://sezcounty.com/wp-content/uploads/2024/02/1244506.png" alt="">
+                                    <p>40 & 30 FEET BT ROADS</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="AmenitiesBox">
+                                    <div class="AmenitiesBoxAbs"></div>
+                                    <img src="https://sezcounty.com/wp-content/uploads/2024/02/3033339.png" alt="">
+                                    <p>CLUBHOUSE</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="AmenitiesBox">
+                                    <div class="AmenitiesBoxAbs"></div>
+                                    <img src="https://sezcounty.com/wp-content/uploads/2024/02/6607199.png" alt="">
+                                    <p>LUSH GREEN CENTRAL PARK</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="AmenitiesBox">
+                                    <div class="AmenitiesBoxAbs"></div>
+                                    <img src="https://sezcounty.com/wp-content/uploads/2024/02/5936465.png" alt="">
+                                    <p>AVENUE PLANTATION</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="AmenitiesBox">
+                                    <div class="AmenitiesBoxAbs"></div>
+                                    <img src="https://sezcounty.com/wp-content/uploads/2024/02/4815384.png" alt="">
+                                    <p>ELECTRICITY WITH STREET LIGHTS</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="AmenitiesBox">
+                                    <div class="AmenitiesBoxAbs"></div>
+                                    <img src="https://sezcounty.com/wp-content/uploads/2024/02/2084028.png" alt="">
+                                    <p>ROUND THE CLOCK SECURITY</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="AmenitiesBox">
+                                    <div class="AmenitiesBoxAbs"></div>
+                                    <img src="https://sezcounty.com/wp-content/uploads/2024/02/5782141.png" alt="">
+                                    <p>UNDER GROUND DRAINAGE WITH SEPTIC TANK</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="AmenitiesBox">
+                                    <div class="AmenitiesBoxAbs"></div>
+                                    <img src="https://sezcounty.com/wp-content/uploads/2024/02/4739023-1.png" alt="">
+                                    <p>UNDER GROUND WATER LINE</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="AmenitiesBox">
+                                    <div class="AmenitiesBoxAbs"></div>
+                                    <img src="https://sezcounty.com/wp-content/uploads/2024/02/10485821.png" alt="">
+                                    <p>OVER HEAD WATER TANK</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="AmenitiesBox">
+                                    <div class="AmenitiesBoxAbs"></div>
+                                    <img src="https://sezcounty.com/wp-content/uploads/2024/02/9755337.png" alt="">
+                                    <p>RAIN WATER HARVESTING</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="AmenitiesBox">
+                                    <div class="AmenitiesBoxAbs"></div>
+                                    <img src="https://sezcounty.com/wp-content/uploads/2024/02/13166626.png" alt="">
+                                    <p>POLLUTION FREE ENVIRONMENT</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="AmenitiesBox">
+                                    <div class="AmenitiesBoxAbs"></div>
+                                    <img src="https://sezcounty.com/wp-content/uploads/2024/02/291445.png" alt="">
+                                    <p>PARKS & KIDS PLAY AREA</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="AmenitiesBox">
+                                    <div class="AmenitiesBoxAbs"></div>
+                                    <img src="https://sezcounty.com/wp-content/uploads/2024/02/3547373.png" alt="">
+                                    <p>SIGNAGE FOR PLOTS & ROADS</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="AmenitiesBox">
+                                    <div class="AmenitiesBoxAbs"></div>
+                                    <img src="https://sezcounty.com/wp-content/uploads/2024/02/2942789.png" alt="">
+                                    <p>Venture Maintenance Guaranteed.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="AmenitiesBox">
+                                    <div class="AmenitiesBoxAbs"></div>
+                                    <img src="https://sezcounty.com/wp-content/uploads/2024/02/2194671.png" alt="">
+                                    <p>BANK LOAN AVAILABLE</p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- Amenities section ends -->
+
+        <!-- tabs section  -->
+        <div class="TabsSectionParent">
+            <div class="container text-center mt-4">
+                <h2 class="fw-bold">PROJECT DETAILS</h2>
+
+                <ul class="nav nav-tabs mt-3" id="projectTabs">
+                    <li class="nav-item">
+                        <button class="nav-link active bg-secondary text-white" data-bs-toggle="tab"
+                            data-bs-target="#locationMap">
+                            📍 Location Map
+                        </button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="nav-link bg-dark text-white" data-bs-toggle="tab" data-bs-target="#layoutMap">
+                            📑 Layout Map
+                        </button>
+                    </li>
+                </ul>
+
+                <div class="tab-content mt-3">
+                    <div class="tab-pane fade show active" id="locationMap">
+                        <img src="https://sezcounty.com/wp-content/uploads/2024/03/11-Sez-County-Brochure_Final-4.jpg"
+                            alt="Location Map">
+                    </div>
+                    <div class="tab-pane fade" id="layoutMap">
+                        <img src="https://sezcounty.com/wp-content/uploads/2024/02/11-Sez-County-Brochure_Final-3.png"
+                            alt="Layout Map">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- tabs section end    -->
+
+        <!-- Location Highlights section -->
+        <div class="LocationHeighlightsParent">
+            <div class="LocationHeading text-center">
+                <h5 style="text-transform: uppercase;"><strong>Location Highlights</strong></h5>
+                <h2 class="project-title">Prime Connectivity, Proximity, and Prosperity Await at Sez County's Key
+                    Locations!</h2>
+            </div>
+            <div class="LocationHeighlightsDesc">
+                <div class="container-lg">
+                    <div class="col-lg-11 mx-auto">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="LocationCard">
+                                            <img src="https://cdn-icons-png.flaticon.com/128/18972/18972045.png" alt="">
+                                            <p>800 meters to Hyderabad - Bangalore Highway</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="LocationCard">
+                                            <img src="https://cdn-icons-png.flaticon.com/128/18972/18972045.png" alt="">
+                                            <p>Near to Educational Institutions, Hospitals, Residential Villa Plotting
+                                                Ventures</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="LocationCard">
+                                            <img src="https://cdn-icons-png.flaticon.com/128/18972/18972045.png" alt="">
+                                            <p>Near to Gollapally Railway Station</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="col-md-4">
+                                <div class="LocationImage">
+                                    <img src="https://sezcounty.com/wp-content/uploads/2024/02/mldmv.png" alt="">
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="LocationCard">
+                                            <img src="https://cdn-icons-png.flaticon.com/128/18972/18972045.png" alt="">
+                                            <p>Opp. to Narsee Monjee Institute of Managment (SVKM's)</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="LocationCard">
+                                            <img src="https://cdn-icons-png.flaticon.com/128/18972/18972045.png" alt="">
+                                            <p>located middle of three districts (Wanaparthy, Nagakurnool &
+                                                Mahaboobnagar)</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="LocationCard">
+                                            <img src="https://cdn-icons-png.flaticon.com/128/18972/18972045.png" alt="">
+                                            <p>Near to Divitipally IT Park</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Location Highlights section end-->
+
+        <!-- gallery section -->
+        <div class="GalleryParent">
+            <h2 class="project-title" style="text-transform: uppercase;">Our Gallery</h2>
+
+            <div class="gallery-container">
+                <div class="swiper unique-gallery-swiper py-5">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img
+                                src="https://sezcounty.com/wp-content/uploads/elementor/thumbs/20231117154804-93875-r0mbewnpi7dwpfxojx4h1ed3zf06am4rp3ah4a43og.jpg"
+                                alt="Image 1"></div>
+                        <div class="swiper-slide"><img
+                                src="https://sezcounty.com/wp-content/uploads/elementor/thumbs/Amaravati-Ventures-r0mbewnpi7dwpfxojx4h1ed3zf06am4rp3ah4a43og.jpeg"
+                                alt="Image 2"></div>
+                        <div class="swiper-slide"><img
+                                src="https://sezcounty.com/wp-content/uploads/elementor/thumbs/view-land-plot-real-estate-business-development_23-2149916722-1-r0mbewnpi7dwpfxojx4h1ed3zf06am4rp3ah4a43og.jpg"
+                                alt="Image 3"></div>
+                        <div class="swiper-slide"><img
+                                src="https://sezcounty.com/wp-content/uploads/elementor/thumbs/aboutbanner-r0mbewnpi7dwpfxojx4h1ed3zf06am4rp3ah4a43og.jpeg"
+                                alt="Image 4"></div>
+                        <div class="swiper-slide"><img
+                                src="https://sezcounty.com/wp-content/uploads/elementor/thumbs/Amaravati-Ventures-r0mbewnpi7dwpfxojx4h1ed3zf06am4rp3ah4a43og.jpeg"
+                                alt="Image 5"></div>
+                    </div>
+                    <div class="swiper-pagination unique-gallery-pagination"></div>
+                </div>
+            </div>
+        </div>
+        <!-- gallery section end-->
+        <section class="reviews-section ProjectsPage text-center" style="background-color: #e3ece7;">
+            <div class="container">
+                <div class="row align-items-center mt-4">
+                    <div class="col-md-6 text-md-start">
+                        <h6 class="text-success">Your Satisfaction Guaranteed!</h6>
+                        <h2 class="fw-bold">Exceeding Expectations, One Delighted Homeowner At A Time – Your
+                            Satisfaction Guaranteed!</h2>
+                    </div>
+                    <div class="col-md-6 position-relative">
+                        <div class="Projectquote-icon">
+                            <img src="https://sezcounty.com/wp-content/uploads/2024/02/pngimg.com-comma_PNG33.png"
+                                alt="">
+                        </div>
+                        <div class="swiper reviews-swiper">
+                            <div class="swiper-wrapper ">
+                                <div class="swiper-slide">
+                                    <div class="review-card">
+                                        <h5 class="fw-bold">Excellent Service</h5>
+                                        <div class="star-rating mb-2">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                                        <p>Choosing Sez County was the best decision I made for my family. The serene
+                                            environment and top-notch amenities exceeded our expectations. Highly
+                                            recommend!</p>
+                                        <strong>Varun Kumar</strong>
+                                        <p class="text-muted">Business</p>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="review-card">
+                                        <h5 class="fw-bold">Amazing Experience</h5>
+                                        <div class="star-rating mb-2">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                                        <p>From booking to move-in, everything was seamless. The staff is super helpful,
+                                            and the place feels like home. Couldn’t ask for more!</p>
+                                        <strong>Sneha Reddy</strong>
+                                        <p class="text-muted">Designer</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="overlay-section">
+            <div class="overlay-content">
+                <h2 class="fw-bold pb-5">Reach Out, Let's Make Your Dream Home A Reality!</h2>
+                <a href="#" class="enquiry-btn ">CONTACT US</a>
+            </div>
+        </section>
+        <div class="custom-contact-section">
+            <div class="container-lg">
+                <div class="col-lg-10 mx-auto">
+                    <div class="row g-4">
+                        <div class=" col-md-6 col-lg-6">
+                            <div class="custom-form-container">
+                                <h4 class="project-title">Contact Us</h4>
+                                <form>
+                                    <div class="mb-3">
+                                        <label for="customName" class="form-label">Name <span
+                                                class="text-danger">*</span></label>
+                                        <input type="text" class="form-control" id="customName" placeholder="Your Name">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="customMobile" class="form-label">Mobile Number <span
+                                                class="text-danger">*</span></label>
+                                        <input type="text" class="form-control" id="customMobile"
+                                            placeholder="Mobile Number">
+                                    </div>
+                                    <div class="mb-5">
+                                        <label for="customLocation" class="form-label">Location</label>
+                                        <input type="text" class="form-control" id="customLocation"
+                                            placeholder="Your Location">
+                                    </div>
+                                    <button style="border: none;" type="submit"
+                                        class="enquiry-btn w-100">Submit</button>
+                                </form>
+                            </div>
+                        </div>
+                        <!-- Map Section -->
+                        <div class=" col-md-6 col-lg-6">
+                            <div class="custom-map-container" style="height: 100%;">
+                                <iframe
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.4741331482583!2d78.39964457510216!3d17.438026283192303!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb935cb9b8e5c5%3A0x57c6c8e7982a2a08!2sSez%20County!5e0!3m2!1sen!2sin!4v1709209876543"
+                                    width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy">
+                                </iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <footer class="footer">
+            <div class="container-lg">
+                <div class="row">
+                    <div class="col-md-12  col-lg-2">
+                        <div class="footer-logo-section">
+                            <div class="footer-logo">
+                                <img src="./images/Gardenia Logo 2.png" alt="">
+                            </div>
+                            <p class="py-1 mt-2">Follow Us:</p>
+                            <div class="social-icons">
+                                <a href="#"><i class="fab fa-facebook"></i></a>
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                                <a href="#"><i class="fab fa-linkedin"></i></a>
+                                <a href="#"><i class="fab fa-youtube"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="footer-Address">
+                            <h5>Address</h5>
+                            <div class="d-flex gap-2">
+                                <i class="fa-solid fa-location-dot mt-2"></i>
+                                <p class="mt-1"> Lorem ipsum dolor sit amet consectetur.
+                                    Id nullam aenean nunc
+                                    interdum amet.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-2 FooterLinks">
+                        <h5>Sitemap Links</h5>
+                        <p><a href="index.html">Home</a></p>
+                        <p><a href="about.html">About Us</a></p>
+                        <p><a href="Rajapur.html">Projects</a></p>
+                        <p><a href="blogs.html">Blogs</a></p>
+                        <p><a href="contact.html">Contact</a></p>
+                    </div>
+                    <div class="col-md-6 col-lg-2 FooterLinks">
+                        <h5>Ongoing Projects</h5>
+                        <p><a href="Rajapur.html">Rajapur</a></p>
+                        <p><a href="Mudireddypally.html">Mudireddypally</a></p>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="contactCardParent">
+                            <div class="contact-card">
+                                <div class="icon1">
+                                    <i class="fas fa-phone"></i>
+                                </div>
+                                <div class="contactInfo">
+                                    <p>+91 12345 67890</p>
+                                    <p class="name">SANJEEV KUMAR</p>
+                                </div>
+                            </div>
+
+                            <div class="contact-card">
+                                <div class=" emailIcon">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div class="contactInfo emailSection">
+                                    <p>EMAIL ID</p>
+                                    <p class="name">abc@gmail.com</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br><br>
+                <div class="text-center copyrightSection">
+                    <p>Copyright &copy;2024 GARDENIA DEVELOPERS. All Rights Reserved</p>
+                </div>
+            </div>
+        </footer>
+    </main>
+
+
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const swiper = new Swiper('.mySwiper', {
+                loop: true,
+                autoplay: {
+                    delay: 2000,
+                },
+                navigation: {
+                    nextEl: '.swiper-button-next-custom',
+                    prevEl: '.swiper-button-prev-custom'
+                },
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                },
+                keyboard: true,
+                // mousewheel: true,
+            });
+        });
+        var reviewsSwiper = new Swiper(".reviews-swiper", {
+            slidesPerView: 1,
+            spaceBetween: 20,
+            loop: true,
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+        });
+
+        document.addEventListener("DOMContentLoaded", function () {
+            new Swiper(".glimpse-slider", {
+                loop: true,
+                spaceBetween: 20,
+                slidesPerView: 1, // Default to 1 for mobile
+                autoplay: {
+                    delay: 3000,
+                },
+                pagination: {
+                    el: ".glimpse-pagination",
+                    clickable: true,
+                },
+                breakpoints: {
+                    576: { slidesPerView: 1 }, // Mobile: 1 slide
+                    768: { slidesPerView: 3 }, // Tablet: 2 slides
+                    1024: { slidesPerView: 4 }, // Desktop: 3 slides
+                }
+            });
+        });
+
+
+
+    </script>
+
+    <script>
+        var uniqueGallerySwiper = new Swiper(".unique-gallery-swiper", {
+            slidesPerView: 1,
+            spaceBetween: 10,
+            loop: true,
+            autoplay: {
+                delay: 2000,
+            },
+            pagination: {
+                el: ".unique-gallery-pagination",
+                clickable: true,
+            },
+            breakpoints: {
+                640: {
+                    slidesPerView: 2,
+                    spaceBetween: 20,
+                },
+                768: {
+                    slidesPerView: 3,
+                    spaceBetween: 30,
+                },
+                1024: {
+                    slidesPerView: 4,
+                    spaceBetween: 40,
+                },
+            },
+        });
+    </script>
+
+<script>
+    window.addEventListener("scroll", function () {
+        let navbar = document.querySelector(".navbar");
+        if (window.scrollY > 50) {
+            navbar.classList.add("fixed");
+        } else {
+            navbar.classList.remove("fixed");
+        }
+    });
+</script>
+</body>
+
+</html>
