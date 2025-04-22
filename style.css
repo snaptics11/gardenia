@@ -889,6 +889,13 @@ p {
   }
   .projectstats .row {
     justify-content: space-around;
+    flex-direction: row-reverse;
+  }
+  .info-box p{
+    font-size: 16px !important;
+  }
+  .projectstats {
+    padding-inline: 10px;
   }
   .info-box img {
     margin-bottom: 50px;
