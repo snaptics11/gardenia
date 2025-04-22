@@ -785,6 +785,9 @@ p {
   background-color: #fff;
 }
 @media (max-width: 768px) {
+  .gallery-container {
+    padding: 20px 0 !important;
+}
   .features div {
     font-size: 14px;
 }
