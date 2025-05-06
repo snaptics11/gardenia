@@ -73,7 +73,7 @@ p {
   object-fit: cover;
 }
 .stats-label {
-  font-size: 22px;
+  font-size: 20px;
   font-weight: 600;
 }
 
@@ -714,7 +714,7 @@ p {
 }
 .icon1 {
   position: absolute;
-  top: -1px;
+  top: 0px;
   left: -41px;
   background: linear-gradient(225.62deg, #02542d 9.33%, #14ae5c 90.32%);
   height: 103%;
@@ -1097,7 +1097,7 @@ p {
     right: -44px;
   }
   .emailSection {
-    width: 220px;
+    width: 270px;
   }
   .contact-card {
     position: relative;
