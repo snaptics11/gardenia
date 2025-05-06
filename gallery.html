@@ -18,8 +18,15 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5/dist/fancybox/fancybox.css" />
+    <!-- Fancybox CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" />
+
     <style>
         /* Colors */
+        /* .carousel__track{
+            display: none;
+        } */
         .GalleryBanner {
             height: 150px;
             display: flex;
@@ -85,6 +92,7 @@
             height: 100%;
             object-fit: cover;
         }
+
 
         /* Responsive Styles */
         @media only screen and (max-width: 600px) {
@@ -186,6 +194,11 @@
             padding-inline: 15px;
             border-right: 2px solid white;
         }
+        button.sub-tab.active {
+    background: green;
+    border: 1px solid green;
+    color: #fff;
+}
 
         /* Marquee Animation */
         @keyframes marquee {
@@ -217,6 +230,48 @@
                 text-align: center;
             }
         }
+
+
+        .tabs {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 1rem;
+            justify-content: center;
+            margin-top: 30px;
+        }
+
+        .tabs button {
+            padding: 10px 20px;
+            background-color: #eee;
+            border: none;
+            cursor: pointer;
+            width: 200px;
+        }
+
+        .tabs button.active {
+            background-color: #0f6939;
+            color: white;
+        }
+
+        .sub-tabs {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 1rem;
+            justify-content: center;
+        }
+        .sub-tab{
+            width: 100px;
+            border: none;
+            padding-block: 5px;
+        }
+
+        .content-section {
+            display: none;
+        }
+
+        .content-section.active {
+            display: block;
+        }
     </style>
 </head>
 
@@ -229,9 +284,12 @@
             <span>PHONE : <a target="_blank" href="tel:+919966764646">+91 9966764646</a></span>
             <span class="d-flex justify-content-between align-items-center gap-3">Follow Us :
                 <div class="d-flex justify-content-between align-items-center gap-3">
-                    <a target="_blank" href="https://www.facebook.com/profile.php?id=61553000948183 "><i class="fab fa-facebook"></i></a>
-                    <a target="_blank" href="https://www.instagram.com/gardeniadevelopers/"><i class="fab fa-instagram"></i></a>
-                    <a target="_blank" href="https://wa.me/919966764646?text=gardenia"><i class="fab fa-whatsapp"></i></a>
+                    <a target="_blank" href="https://www.facebook.com/profile.php?id=61553000948183 "><i
+                            class="fab fa-facebook"></i></a>
+                    <a target="_blank" href="https://www.instagram.com/gardeniadevelopers/"><i
+                            class="fab fa-instagram"></i></a>
+                    <a target="_blank" href="https://wa.me/919966764646?text=gardenia"><i
+                            class="fab fa-whatsapp"></i></a>
                 </div>
             </span>
         </div>
@@ -282,9 +340,123 @@
         <div class="custom-container">
             <h1 class="fisrt-h1">Explore Our Gallery</h1>
         </div>
-
     </div>
-    <main class="main">
+
+
+    <!-- Project Tabs -->
+    <div class="tabs">
+        <button class="project-tab active" data-project="project1">Rajapur</button>
+        <button class="project-tab" data-project="project2">Mudireddipally</button>
+    </div>
+
+    <!-- Sub Tabs -->
+    <div class="sub-tabs">
+        <button class="sub-tab active" data-type="images">Images</button>
+        <button class="sub-tab" data-type="videos">Videos</button>
+    </div>
+
+    <!-- Project 1 -->
+    <div class="content-section project1 images active">
+        <main class="main">
+            <div class="custom-container GallerYMainContainer">
+                <!-- First half of images with Fancybox -->
+                <div class="card">
+                    <div class="card-image">
+                        <a href="./images/mudireddipally-images1.jpg" data-fancybox="gallery-project1" data-caption="Image 1">
+                            <img src="./images/mudireddipally-images1.jpg" alt="Image 1">
+                        </a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-image">
+                        <a href="./images/mudireddipally-images2.jpg" data-fancybox="gallery-project1" data-caption="Image 2">
+                            <img src="./images/mudireddipally-images2.jpg" alt="Image 2">
+                        </a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-image">
+                        <a href="./images/mudireddipally-images3.png" data-fancybox="gallery-project1" data-caption="Image 3">
+                            <img src="./images/mudireddipally-images3.png" alt="Image 3">
+                        </a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-image">
+                        <a href="./images/mudireddipally-images4.png" data-fancybox="gallery-project1" data-caption="Image 4">
+                            <img src="./images/mudireddipally-images4.png" alt="Image 4">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </main>
+        
+    </div>
+
+    <div class="content-section project1 videos">
+        <main class="main">
+            <div class="custom-container GallerYMainContainer">
+                <p>Rajapur Videos Here</p>
+            </div>
+        </main>
+    </div>
+
+    <!-- Project 2 -->
+    <div class="content-section project2 images">
+        <main class="main">
+            <div class="custom-container GallerYMainContainer">
+                <!-- Second half of images with Fancybox -->
+                <div class="card">
+                    <div class="card-image">
+                        <a href="./images/Gardenia Mudireddipally Flyer-V2.png" data-fancybox="gallery-project2" data-caption="Flyer V2">
+                            <img src="./images/Gardenia Mudireddipally Flyer-V2.png" alt="Flyer V2">
+                        </a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-image">
+                        <a href="./images/Gardenia Mudireddipally Flyer-V3.png" data-fancybox="gallery-project2" data-caption="Flyer V3">
+                            <img src="./images/Gardenia Mudireddipally Flyer-V3.png" alt="Flyer V3">
+                        </a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-image">
+                        <a href="./images/Gardenia Mudireddipally Flyer-V4.png" data-fancybox="gallery-project2" data-caption="Flyer V4">
+                            <img src="./images/Gardenia Mudireddipally Flyer-V4.png" alt="Flyer V4">
+                        </a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-image">
+                        <a href="./images/Gardenia Mudireddipally Flyer-V5.png" data-fancybox="gallery-project2" data-caption="Flyer V5">
+                            <img src="./images/Gardenia Mudireddipally Flyer-V5.png" alt="Flyer V5">
+                        </a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-image">
+                        <a href="./images/Gardenia Mudireddipally Flyer-V6.png" data-fancybox="gallery-project2" data-caption="Flyer V6">
+                            <img src="./images/Gardenia Mudireddipally Flyer-V6.png" alt="Flyer V6">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </main>
+        
+    </div>
+
+    <div class="content-section project2 videos">
+        <main class="main">
+            <div class="custom-container GallerYMainContainer">
+                <p>Mudireddipally Videos Here</p>
+            </div>
+        </main>
+    </div>
+
+
+
+    <!-- <main class="main">
         <div class="custom-container GallerYMainContainer">
             <div class="card">
                 <div class="card-image">
@@ -368,7 +540,7 @@
                 </div>
             </div>
         </div>
-    </main>
+    </main> -->
 
 
 
@@ -384,10 +556,13 @@
                         </div>
                         <p class="py-1 mt-2">Follow Us:</p>
                         <div class="social-icons">
-                            <a target="_blank" href="https://www.facebook.com/profile.php?id=61553000948183 "><i class="fab fa-facebook"></i></a>
-                           <a target="_blank" href="https://www.instagram.com/gardeniadevelopers/"><i class="fab fa-instagram"></i></a>
+                            <a target="_blank" href="https://www.facebook.com/profile.php?id=61553000948183 "><i
+                                    class="fab fa-facebook"></i></a>
+                            <a target="_blank" href="https://www.instagram.com/gardeniadevelopers/"><i
+                                    class="fab fa-instagram"></i></a>
                             <a href="#"><i class="fab fa-linkedin"></i></a>
-                            <a target="_blank" href=" https://www.youtube.com/@gardeniadevelopers"><i class="fab fa-youtube"></i></a>
+                            <a target="_blank" href=" https://www.youtube.com/@gardeniadevelopers"><i
+                                    class="fab fa-youtube"></i></a>
                         </div>
                     </div>
                 </div>
@@ -396,9 +571,7 @@
                         <h5>Address</h5>
                         <div class="d-flex gap-2">
                             <i class="fa-solid fa-location-dot mt-2"></i>
-                            <p class="mt-1"> Lorem ipsum dolor sit amet consectetur.
-                                Id nullam aenean nunc
-                                interdum amet.</p>
+                            <p class="mt-1"> Prabha Plaza, 4th Floor, Prakash Nagar, Begumpet, Hyderabad, Telangana 500016</p>
                         </div>
                     </div>
                 </div>
@@ -421,10 +594,10 @@
                             <div class="icon1">
                                 <i class="fas fa-phone"></i>
                             </div>
-                            <div class="contactInfo">
-                                <p>+91 9966764646</p>
-                                <p class="name">SANJEEV KUMAR</p>
-                            </div>
+                              <div class="contactInfo">
+                                    <p class="name">PHONE</p>
+                                    <p>+91 9966764646</p>
+                                </div>
                         </div>
 
                         <div class="contact-card">
@@ -433,7 +606,7 @@
                             </div>
                             <div class="contactInfo emailSection">
                                 <p>EMAIL ID</p>
-                                <p class="name">abc@gmail.com</p>
+                                <p class="name">info@gardeniadevelopers.com</p>
                             </div>
                         </div>
                     </div>
@@ -454,20 +627,68 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
     <!-- Bootstrap 5 JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Fancybox JS -->
+<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script>
+
+    <!-- JavaScript -->
     <script>
-        $('[data-fancybox="gallery"]').fancybox({
-            buttons: [
-                "slideShow",
-                "thumbs",
-                "zoom",
-                "fullScreen",
-                "share",
-                "close"
-            ],
-            loop: false,
-            protect: true
+        const projectTabs = document.querySelectorAll('.project-tab');
+        const subTabs = document.querySelectorAll('.sub-tab');
+        const sections = document.querySelectorAll('.content-section');
+
+        let currentProject = 'project1';
+        let currentType = 'images';
+
+        function updateView() {
+            sections.forEach(section => {
+                if (section.classList.contains(currentProject) && section.classList.contains(currentType)) {
+                    section.classList.add('active');
+                } else {
+                    section.classList.remove('active');
+                }
+            });
+        }
+
+        projectTabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                projectTabs.forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+                currentProject = tab.dataset.project;
+                updateView();
+            });
         });
+
+        subTabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                subTabs.forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+                currentType = tab.dataset.type;
+                updateView();
+            });
+        });
+
+        updateView();
     </script>
+
+<script>
+Fancybox.bind('[data-fancybox]', {
+  Toolbar: {
+    display: [
+      { id: "counter", position: "center" },
+      "zoom",
+      "fullscreen",
+      "download",
+      "thumbs",
+      "close",
+    ],
+  },
+  loop: false,
+  protect: true,
+});
+
+  </script>
+  
     <script>
         window.addEventListener("scroll", function () {
             let navbar = document.querySelector(".navbar");

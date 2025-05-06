@@ -565,6 +565,7 @@ p {
   border-radius: 50%;
   margin-right: 10px;
   object-fit: cover;
+  display: none;
 }
 
 .review-author h6 {
@@ -706,7 +707,7 @@ p {
   padding: 6px;
   margin-bottom: 1px;
   border-radius: 0 50px 0 0;
-  width: 220px;
+  width: 280px;
 }
 .contact-card {
   position: relative;
@@ -734,7 +735,10 @@ p {
   width: 65px;
   border-radius: 0 0 0 50px;
   position: absolute;
-  right: 21px;
+  right:-40px;
+  transform: rotate(181deg);
+}
+.emailIcon i.fas.fa-envelope{
   transform: rotate(180deg);
 }
 .form-control {
@@ -742,7 +746,8 @@ p {
 }
 .emailSection {
   border-radius: 0 0 0 50px;
-  width: 195px;
+  /* width: 195px; */
+  width: 270px;
   margin-left: 25px;
 }
 .emailSection i.fas.fa-envelope {
@@ -984,6 +989,7 @@ p {
     align-items: center;
     margin-top: 25px;
     padding-top: 0;
+    margin-left: -15px;
   }
   .copyrightSection {
     border-top: 1px solid #fff;
@@ -991,7 +997,7 @@ p {
     margin-top: 0;
   }
   .emailIcon {
-    right: -42px;
+    right: -45px;
   }
   .footer {
     color: white;
@@ -1146,4 +1152,42 @@ p {
     width: 75%;
     margin: 30px auto;
   }
+}
+.whyChooseCard{
+  transition: all 0.3s linear;
+}
+.whyChooseCard:hover{
+ transform: scale(1.04);
+ background-color:#02542d !important;
+ color: #fff !important;
+ border: 2px solid #27ae60;
+}
+.whyChooseCard:hover h4,.whyChooseCard:hover p{
+  color: #fff !important;
+}
+.whyChooseCard:nth-child(2):hover{
+  background-color:transparent !important;
+  color: #000 !important;
+}
+.strategicLocation:hover{
+  background-color:transparent !important;
+  color: #000 !important;
+  border: 2px solid #27ae60 !important;
+}
+.strategicLocation:hover h4,.strategicLocation:hover p{
+  color: #000 !important;
+
+}
+
+@media screen and (max-width:575px){
+  .emailSection .name{
+font-size: 12px !important;
+  }
+  .emailSection {
+    width: 270px;
+    margin-left: 25px;
+}
+.contactInfo {
+  width: 200px;
+}
 }
