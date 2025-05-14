@@ -246,7 +246,7 @@
             padding-bottom: 100px;
         }
 
-   
+
 
         .TabsSectionParent>* {
             position: relative;
@@ -482,35 +482,48 @@
             font-size: 18px;
             font-weight: 600;
         }
-        .TabsSectionParent{
+
+        .TabsSectionParent {
             position: relative;
         }
-        .downloadLinks{
+
+        .downloadLinks {
             position: absolute;
             right: 0;
             top: 0px;
             margin-bottom: 20px;
         }
-        .downloadLinks button{
+
+        .downloadLinks button {
             border: 1px solid #000;
             padding: 5px;
         }
-        .downloadLinks button:hover{
+.downloadLinks a{
+            text-decoration: none;
+            color: #000;
+        }
+        .downloadLinks button:hover a{
+            color: #fff;
+        }
+        .downloadLinks button:hover {
             color: #fff;
             background-color: #000;
         }
-        @media screen and (max-width:575px){
-              .downloadLinks button{
-            font-size: 14px;
-        }
+        
+
+        @media screen and (max-width:575px) {
+            .downloadLinks button {
+                font-size: 14px;
+            }
         }
 
         @media (max-width:768px) {
-             .downloadLinks{
-            position: relative;
-            justify-content: center;
-            
-        }
+            .downloadLinks {
+                position: relative;
+                justify-content: center;
+
+            }
+
             .project-info-box {
                 gap: 10px;
             }
@@ -675,11 +688,12 @@
 
 
         @media screen and (min-width:768px) and (max-width:991px) {
-                 .downloadLinks{
-            position: relative;
-            justify-content: center;
-            
-        }
+            .downloadLinks {
+                position: relative;
+                justify-content: center;
+
+            }
+
             .aboutProjectLeft img:nth-child(1) {
                 right: 0;
             }
@@ -688,13 +702,14 @@
                 display: none;
             }
         }
-        @media screen and (min-width:992px) and (max-width:1200px){
-                 .downloadLinks{
-            position: relative;
-            justify-content: center;
-            padding-bottom: 20px;
-            
-        }
+
+        @media screen and (min-width:992px) and (max-width:1200px) {
+            .downloadLinks {
+                position: relative;
+                justify-content: center;
+                padding-bottom: 20px;
+
+            }
         }
     </style>
 </head>
@@ -824,10 +839,11 @@
                 <div class="col-lg-11 mx-auto">
                     <h2 class="fw-bold project-title pb-5">PROJECT DETAILS</h2>
                     <div class="downloadLinks d-flex gap-2">
-                    <button>Download Brochure</button>
-                    <button>Download Layout</button>
-                    <button>Get Directions</button>
-                </div>
+
+                        <button><a download href="./images/Rajapur Flyer.pdf">Download Brochure</a></button>
+                        <button><a href="./images/Gardenia Rajapur Layout-Phase1.pdf">Download Layout</a></button>
+                        <button>Get Directions</button>
+                    </div>
                     <div class="row">
                         <div class="col-md-6">
                             <div class="aboutProjectLeft">
@@ -1164,7 +1180,7 @@
 
         <!-- tabs section end    -->
 
-            <section class="why-invest-section py-5 my-4">
+        <section class="why-invest-section py-5 my-4">
             <div class="container-lg">
                 <div class="row align-items-center">
                     <!-- Image Column -->
@@ -1229,8 +1245,8 @@
             </div>
         </div>
         <!-- gallery section end-->
- 
-    
+
+
 
         <section class="overlay-section">
             <div class="overlay-content">
@@ -1241,7 +1257,7 @@
                 <a href="#" class="enquiry-btn ">CONTACT US</a>
             </div>
         </section>
-               <section class="reviews-section ProjectsPage text-center" style="background-color: #e3ece7;">
+        <section class="reviews-section ProjectsPage text-center" style="background-color: #e3ece7;">
             <div class="container">
                 <div class="row align-items-center mt-4">
                     <div class="col-md-6 text-md-start">
