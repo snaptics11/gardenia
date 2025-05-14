@@ -242,21 +242,11 @@
         .TabsSectionParent {
             position: relative;
             padding-block: 50px;
-            background-color: #f2f2f2;
+            background-color: #fff;
+            padding-bottom: 100px;
         }
 
-        .TabsSectionParent::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: url(https://sezcounty.com/wp-content/uploads/2024/02/download-3.png) center/cover no-repeat;
-            background-color: rgba(0, 0, 0, 0.5);
-            z-index: 0;
-            opacity: 0.2;
-        }
+   
 
         .TabsSectionParent>* {
             position: relative;
@@ -382,7 +372,7 @@
 
         .unique-gallery-swiper .swiper-slide img {
             width: 100%;
-            height:250px;
+            height: 250px;
             border-radius: 10px;
         }
 
@@ -487,18 +477,49 @@
         .project-info-box h3 {
             font-weight: 600;
         }
-.accordion-button{
-    font-size: 18px;
-    font-weight: 600;
-}
+
+        .accordion-button {
+            font-size: 18px;
+            font-weight: 600;
+        }
+        .TabsSectionParent{
+            position: relative;
+        }
+        .downloadLinks{
+            position: absolute;
+            right: 0;
+            top: 0px;
+            margin-bottom: 20px;
+        }
+        .downloadLinks button{
+            border: 1px solid #000;
+            padding: 5px;
+        }
+        .downloadLinks button:hover{
+            color: #fff;
+            background-color: #000;
+        }
+        @media screen and (max-width:575px){
+              .downloadLinks button{
+            font-size: 14px;
+        }
+        }
+
         @media (max-width:768px) {
+             .downloadLinks{
+            position: relative;
+            justify-content: center;
+            
+        }
             .project-info-box {
                 gap: 10px;
             }
-            .accordion-button{
-    font-size: 15px;
-    font-weight: 600;
-}
+
+            .accordion-button {
+                font-size: 15px;
+                font-weight: 600;
+            }
+
             .LocationHeighlightsParent .project-title {
                 font-size: 20px;
             }
@@ -654,6 +675,11 @@
 
 
         @media screen and (min-width:768px) and (max-width:991px) {
+                 .downloadLinks{
+            position: relative;
+            justify-content: center;
+            
+        }
             .aboutProjectLeft img:nth-child(1) {
                 right: 0;
             }
@@ -661,6 +687,14 @@
             .aboutProjectLeft img:nth-child(2) {
                 display: none;
             }
+        }
+        @media screen and (min-width:992px) and (max-width:1200px){
+                 .downloadLinks{
+            position: relative;
+            justify-content: center;
+            padding-bottom: 20px;
+            
+        }
         }
     </style>
 </head>
@@ -673,9 +707,14 @@
             <span>PHONE : <a target="_blank" href="tel:+919966764646">+91 9966764646</a></span>
             <span class="d-flex justify-content-between align-items-center gap-3">Follow Us :
                 <div class="d-flex justify-content-between align-items-center gap-3">
-                    <a target="_blank" href="https://www.facebook.com/profile.php?id=61553000948183 "><i class="fab fa-facebook"></i></a>
-                    <a target="_blank" href="https://www.instagram.com/gardeniadevelopers/"><i class="fab fa-instagram"></i></a>
-                    <a target="_blank" href="https://wa.me/919966764646?text=gardenia"><i class="fab fa-whatsapp"></i></a>
+                    <a target="_blank" href="https://www.youtube.com/@gardeniadevelopers"><i
+                            class="fab fa-youtube"></i></a>
+                    <a target="_blank" href="https://www.facebook.com/profile.php?id=61553000948183 "><i
+                            class="fab fa-facebook"></i></a>
+                    <a target="_blank" href="https://www.instagram.com/gardeniadevelopers/"><i
+                            class="fab fa-instagram"></i></a>
+                    <a target="_blank" href="https://wa.me/919966764646?text=gardenia"><i
+                            class="fab fa-whatsapp"></i></a>
                 </div>
             </span>
         </div>
@@ -734,22 +773,23 @@
                                 <h2><strong>Gardenia Rajapur</strong></h2>
                                 <p><strong>A Once-in-a-Lifetime Investment Opportunity</strong></p>
                                 <h3>RESIDENTIAL VILLA PLOTS @ Hyderabad – Bangalore Highway</h3>
-                                <p><strong>NEAR POLEPALLY SEZ | 25 ACRES LAYOUT | MUDA APPROVED</strong></p>
+                                <p><strong>NEAR POLEPALLY SEZ | 3.2 ACRES LAYOUT | DTCP APPROVED</strong></p>
                                 <div class="features">
-                                    <div><i class="fa-solid fa-archway"></i> 24x7 Security</div>
-                                    <div><i class="fa-solid fa-road"></i> 	Wide CC Roads</div>
-                                    <div><i class="fa-solid fa-file-contract"></i>Electricity & Water Sump</div>
+                                    <div><i class="fa-solid fa-archway"></i>Electricity </div>
+                                    <div><i class="fa-solid fa-road"></i> Wide CC Roads</div>
+                                    <div><i class="fa-solid fa-file-contract"></i>Water Connection</div>
                                     <div><i class="fa-solid fa-leaf"></i> Avenue Plantation </div>
-                                    <div><i class="fa-solid fa-water"></i> Underground Drainage & Water Connection</div>
-                                    
-                                    <div><i class="fa-solid fa-building-shield"></i> Compound Wall with Security Gate</div>
-                                    <div><i class="fa-solid fa-lightbulb"></i> Electricity with Street Lights</div>
+                                    <div><i class="fa-solid fa-water"></i> Underground Drainage</div>
+
+                                    <div><i class="fa-solid fa-building-shield"></i> Entrance Arch</div>
+                                    <div><i class="fa-solid fa-lightbulb"></i> Peaceful Ambience</div>
                                     <div><i class="fa-solid fa-location-dot"></i> 2 KM from Polepally SEZ</div>
-                                    <div><i class="fa-solid fa-chart-line"></i>Peaceful ambiance with pollution-free surroundings</div>
-                                    <div><i class="fa-solid fa-road"></i>1 KM from the Hyderabad–Bangalore National Highway (NH-44)</div>
+                                    <div><i class="fa-solid fa-chart-line"></i>Pollution-free Surroundings</div>
+                                    <div><i class="fa-solid fa-road"></i>1 KM from the Hyderabad–Bangalore National
+                                        Highway (NH-44)</div>
                                 </div>
                             </div>
-                            
+
                         </div>
                         <div class="col-md-6">
                             <div class="form-box">
@@ -779,27 +819,43 @@
         </div>
 
         <!-- about project -->
-        <div class="projectDetails">
+        <div class="projectDetails TabsSectionParent">
             <div class="container-lg">
                 <div class="col-lg-11 mx-auto">
+                    <h2 class="fw-bold project-title pb-5">PROJECT DETAILS</h2>
+                    <div class="downloadLinks d-flex gap-2">
+                    <button>Download Brochure</button>
+                    <button>Download Layout</button>
+                    <button>Get Directions</button>
+                </div>
                     <div class="row">
                         <div class="col-md-6">
                             <div class="aboutProjectLeft">
-                                <img src="./images/bg-image.webp"
-                                    alt="">
-                                    <img src="./images/family.jpg"
-                                    alt="" style="object-fit: contain;">
+                                <img src="./images/bg-image.webp" alt="">
+                                <img src="./images/family.jpg" alt="" style="object-fit: contain;">
 
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="aboutProjectRight">
                                 <h4 class="project-title text-start">About Gardenia Rajapur</h4>
-                                <p>Gardenia Rajapur is a premium plotted development located just 2 KM from the booming Polepally SEZ (Jadcherla Green Industrial Park) and 1 KM from NH-44. With over 1 lakh+ employees working in the SEZ and prices growing 10 times since 2015, this project offers unmatched appreciation potential. Fully developed with ready-to-construct plots and modern amenities like CC roads, underground drainage, electricity, water connection, and security, it’s an ideal investment near a high-growth zone. Perfect for those seeking peaceful living with future-proof returns.</p>
-                                <p>5.2 Acres | 79 Plots | DTCP Approved & MUDA ZONE | 1.2km from HIGHWAY | 2km from 1600 Acres SEZ | 100% Developments Completed | Ready to Live in | Low cost Investment | 100% Appreciation Guaranteed</p>
-                                <!-- <a style="text-decoration: none;" href="#" class="more-details-btn "> More Details
-                                    <span><i class="fas fa-leaf leaf-icon"></i></span>
-                                </a> -->
+                                <p>Gardenia Rajapur is a premium plotted development located just 2 KM from the booming
+                                    Polepally SEZ (Jadcherla Green Industrial Park) and 1 KM from NH-44. With over 1
+                                    lakh+ employees working in the SEZ and prices growing 10 times since 2015, this
+                                    project offers unmatched appreciation potential. Fully developed with
+                                    ready-to-construct plots and modern amenities like CC roads, underground drainage,
+                                    electricity, water connection, and security, it’s an ideal investment near a
+                                    high-growth zone. Perfect for those seeking peaceful living with future-proof
+                                    returns.</p>
+
+
+                                <ul>
+                                    <li>DTCP Approved & MUDA ZONE </li>
+                                    <li>100% Developments Completed</li>
+                                    <li>Ready to Live in</li>
+                                    <li>Low cost Investment</li>
+                                    <li>100% Appreciation Guaranteed</li>
+                                </ul>
                             </div>
                         </div>
                     </div>
@@ -814,7 +870,8 @@
         <div class="AmenitiesParent reviews-section" style="background-color: #e3ece7;">
             <div class="Amenitiesitle text-center">
                 <h2 class="project-title pb-2"> Ready-to-Build With Premium Amenities</h2>
-                <p>Gardenia Rajapur is a fully-developed, ready-to-live-in layout offering premium infrastructure and modern facilities:</p>
+                <p>Gardenia Rajapur is a fully-developed, ready-to-live-in layout offering premium infrastructure and
+                    modern facilities:</p>
             </div>
             <div class="Amenities-content">
                 <div class="container-lg">
@@ -824,14 +881,14 @@
                                 <div class="AmenitiesBox">
                                     <div class="AmenitiesBoxAbs"></div>
                                     <img src="./images/aminities1.png" alt="">
-                                    <p>25 ACRES LAYOUT</p>
+                                    <p>3.2 ACRES LAYOUT</p>
                                 </div>
                             </div>
                             <div class="col-md-4">
                                 <div class="AmenitiesBox">
                                     <div class="AmenitiesBoxAbs"></div>
                                     <img src="./images/aminities2.png" alt="">
-                                    <p>MUDA APPROVED LAYOUT</p>
+                                    <p>DTCP APPROVED LAYOUT</p>
                                 </div>
                             </div>
                             <!-- <div class="col-md-4">
@@ -845,7 +902,7 @@
                                 <div class="AmenitiesBox">
                                     <div class="AmenitiesBoxAbs"></div>
                                     <img src="./images/aminities4.png" alt="">
-                                    <p>GRAND ENTRANCE ARCH</p>
+                                    <p> ENTRANCE ARCH</p>
                                 </div>
                             </div>
                             <div class="col-md-4">
@@ -859,21 +916,21 @@
                                 <div class="AmenitiesBox">
                                     <div class="AmenitiesBoxAbs"></div>
                                     <img src="./images/aminities6.png" alt="">
-                                    <p>40 & 30 FEET BT ROADS</p>
+                                    <p> 30 FEET CC ROADS</p>
                                 </div>
                             </div>
-                            <div class="col-md-4">
+                            <!-- <div class="col-md-4">
                                 <div class="AmenitiesBox">
                                     <div class="AmenitiesBoxAbs"></div>
                                     <img src="./images/aminities7.png" alt="">
                                     <p>CLUBHOUSE</p>
                                 </div>
-                            </div>
+                            </div> -->
                             <div class="col-md-4">
                                 <div class="AmenitiesBox">
                                     <div class="AmenitiesBoxAbs"></div>
                                     <img src="./images/aminities8.png" alt="">
-                                    <p>LUSH GREEN CENTRAL PARK</p>
+                                    <p>LUSH GREEN PARK</p>
                                 </div>
                             </div>
                             <div class="col-md-4">
@@ -887,21 +944,21 @@
                                 <div class="AmenitiesBox">
                                     <div class="AmenitiesBoxAbs"></div>
                                     <img src="./images/aminities10.png" alt="">
-                                    <p>ELECTRICITY WITH STREET LIGHTS</p>
+                                    <p>ELECTRICITY </p>
                                 </div>
                             </div>
-                            <div class="col-md-4">
+                            <!-- <div class="col-md-4">
                                 <div class="AmenitiesBox">
                                     <div class="AmenitiesBoxAbs"></div>
                                     <img src="./images/aminities11.png" alt="">
                                     <p>ROUND THE CLOCK SECURITY</p>
                                 </div>
-                            </div>
+                            </div> -->
                             <div class="col-md-4">
                                 <div class="AmenitiesBox">
                                     <div class="AmenitiesBoxAbs"></div>
                                     <img src="./images/aminities12.png" alt="">
-                                    <p>UNDERGROUND DRAINAGE WITH SEPTIC TANK</p>
+                                    <p>UNDERGROUND DRAINAGE</p>
                                 </div>
                             </div>
                             <div class="col-md-4">
@@ -911,7 +968,7 @@
                                     <p>UNDERGROUND WATER LINE</p>
                                 </div>
                             </div>
-                            <div class="col-md-4">
+                            <!-- <div class="col-md-4">
                                 <div class="AmenitiesBox">
                                     <div class="AmenitiesBoxAbs"></div>
                                     <img src="./images/aminities14.png" alt="">
@@ -924,7 +981,7 @@
                                     <img src="./images/aminities15.png" alt="">
                                     <p>RAINWATER HARVESTING</p>
                                 </div>
-                            </div>
+                            </div> -->
                             <div class="col-md-4">
                                 <div class="AmenitiesBox">
                                     <div class="AmenitiesBoxAbs"></div>
@@ -932,13 +989,13 @@
                                     <p>POLLUTION-FREE ENVIRONMENT</p>
                                 </div>
                             </div>
-                            <div class="col-md-4">
+                            <!-- <div class="col-md-4">
                                 <div class="AmenitiesBox">
                                     <div class="AmenitiesBoxAbs"></div>
                                     <img src="./images/aminities17.png" alt="">
                                     <p>PARKS & KIDS PLAY AREA</p>
                                 </div>
-                            </div>
+                            </div> -->
                             <!-- <div class="col-md-4">
                                 <div class="AmenitiesBox">
                                     <div class="AmenitiesBoxAbs"></div>
@@ -946,13 +1003,13 @@
                                     <p>SIGNAGE FOR PLOTS & ROADS</p>
                                 </div>
                             </div> -->
-                            <div class="col-md-4">
+                            <!-- <div class="col-md-4">
                                 <div class="AmenitiesBox">
                                     <div class="AmenitiesBoxAbs"></div>
                                     <img src="./images/aminities19.png" alt="">
                                     <p>VENTURE MAINTENANCE GUARANTEED</p>
                                 </div>
-                            </div>
+                            </div> -->
                             <!-- <div class="col-md-4">
                                 <div class="AmenitiesBox">
                                     <div class="AmenitiesBoxAbs"></div>
@@ -964,7 +1021,7 @@
                     </div>
                 </div>
             </div>
-            
+
         </div>
         <!-- Amenities section ends -->
 
@@ -1006,7 +1063,7 @@
                                             </p>
                                         </div>
                                     </div>
-                                   
+
                                 </div>
 
                             </div>
@@ -1068,11 +1125,17 @@
         </div>
         <!-- Location Highlights section end-->
 
-        
+
         <!-- tabs section  -->
-        <div class="TabsSectionParent">
+
+        <!-- <div class="TabsSectionParent">
             <div class="container text-center mt-4">
                 <h2 class="fw-bold">PROJECT DETAILS</h2>
+                <div class="downloadLinks d-flex gap-2">
+                    <button>Download Brochure</button>
+                    <button>Download Layout</button>
+                    <button>Get Directions</button>
+                </div>
 
                 <ul class="nav nav-tabs mt-3" id="projectTabs">
                     <li class="nav-item">
@@ -1090,17 +1153,45 @@
 
                 <div class="tab-content mt-3">
                     <div class="tab-pane fade show active" id="locationMap">
-                        <img src="./images/mudireddipalli_location.jpg"
-                            alt="Location Map">
+                        <img src="./images/mudireddipalli_location.jpg" alt="Location Map">
                     </div>
                     <div class="tab-pane fade" id="layoutMap">
-                        <img src="./images/mudireddypalli_layout.jpg"
-                            alt="Layout Map">
+                        <img src="./images/mudireddypalli_layout.jpg" alt="Layout Map">
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
+
         <!-- tabs section end    -->
+
+            <section class="why-invest-section py-5 my-4">
+            <div class="container-lg">
+                <div class="row align-items-center">
+                    <!-- Image Column -->
+                    <div class="col-md-6 mb-4 mb-md-0 px-md-5">
+                        <img src="./images/bg-image.webp" alt="Why Invest in Gardenia" class="img-fluid rounded shadow">
+                    </div>
+                    <!-- Content Column -->
+                    <div class="col-md-6 p-md-4">
+                        <h2 class="mb-4  project-title" style="text-align: left;"><i
+                                class="fa-solid fa-lightbulb text-success me-2 "></i> Why Invest in Gardenia Rajapur ?
+                        </h2>
+                        <ul class="list-unstyled">
+                            <li class="mb-2"><i class="fa-solid fa-check text-success me-2"></i> Located in the
+                                fastest-growing SEZ belt</li>
+                            <li class="mb-2"><i class="fa-solid fa-check text-success me-2"></i> Surging demand for
+                                housing near the employment hub</li>
+                            <li class="mb-2"><i class="fa-solid fa-check text-success me-2"></i> Immediate returns with
+                                long-term appreciation potential</li>
+                            <li class="mb-2"><i class="fa-solid fa-check text-success me-2"></i> Developed layout with
+                                all civic amenities</li>
+                            <li class="mb-2"><i class="fa-solid fa-check text-success me-2"></i> Peaceful,
+                                pollution-free lifestyle close to the city</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
 
         <!-- gallery section -->
         <div class="GalleryParent">
@@ -1113,26 +1204,44 @@
                         <div class="swiper-slide"><img src="./images/mudireddipally-images2.jpg" alt="Image 2"></div>
                         <div class="swiper-slide"><img src="./images/mudireddipally-images3.png" alt="Image 3"></div>
                         <div class="swiper-slide"><img src="./images/mudireddipally-images4.png" alt="Image 4"></div>
-                        <div class="swiper-slide"><img src="./images/Gardenia Mudireddipally Flyer-V2.png" alt="Image 4"></div>
-                        <div class="swiper-slide"><img src="./images/Gardenia Mudireddipally Flyer-V3.png" alt="Image 4"></div>
-                        <div class="swiper-slide"><img src="./images/Gardenia Mudireddipally Flyer-V4.png" alt="Image 4"></div>
-                        <div class="swiper-slide"><img src="./images/Gardenia Mudireddipally Flyer-V5.png" alt="Image 4"></div>
-                        <div class="swiper-slide"><img src="./images/Gardenia Mudireddipally Flyer-V6.png" alt="Image 4"></div>
-                        <div class="swiper-slide"><img src="./images/Gardenia Mudireddipally Flyer-V7.png" alt="Image 4"></div>
+                        <div class="swiper-slide"><img src="./images/Gardenia Mudireddipally Flyer-V2.png"
+                                alt="Image 4"></div>
+                        <div class="swiper-slide"><img src="./images/Gardenia Mudireddipally Flyer-V3.png"
+                                alt="Image 4"></div>
+                        <div class="swiper-slide"><img src="./images/Gardenia Mudireddipally Flyer-V4.png"
+                                alt="Image 4"></div>
+                        <div class="swiper-slide"><img src="./images/Gardenia Mudireddipally Flyer-V5.png"
+                                alt="Image 4"></div>
+                        <div class="swiper-slide"><img src="./images/Gardenia Mudireddipally Flyer-V6.png"
+                                alt="Image 4"></div>
+                        <div class="swiper-slide"><img src="./images/Gardenia Mudireddipally Flyer-V7.png"
+                                alt="Image 4"></div>
                         <div class="swiper-slide"><img src="./images/development_1.png" alt="Image 4"></div>
                         <div class="swiper-slide"><img src="./images/development_2.png" alt="Image 4"></div>
                         <div class="swiper-slide"><img src="./images/development3.png" alt="Image 4"></div>
                         <!-- <div class="swiper-slide"><img src="./images/development4.png" alt="Image 4"></div>
                         <div class="swiper-slide"><img src="./images/development5.png" alt="Image 4"></div>
                         <div class="swiper-slide"><img src="./images/development6.png" alt="Image 4"></div> -->
-       
+
                     </div>
                     <div class="swiper-pagination unique-gallery-pagination"></div>
                 </div>
             </div>
         </div>
         <!-- gallery section end-->
-        <section class="reviews-section ProjectsPage text-center" style="background-color: #e3ece7;">
+ 
+    
+
+        <section class="overlay-section">
+            <div class="overlay-content">
+                <h2 class="fw-bold pb-1">Book Your Plot Today</h2>
+                <p class="py-4">Don’t miss your chance to be part of this growth revolution.
+                    <strong> Call now or schedule a site visit</strong> to witness the transformation yourself.
+                </p>
+                <a href="#" class="enquiry-btn ">CONTACT US</a>
+            </div>
+        </section>
+               <section class="reviews-section ProjectsPage text-center" style="background-color: #e3ece7;">
             <div class="container">
                 <div class="row align-items-center mt-4">
                     <div class="col-md-6 text-md-start">
@@ -1142,8 +1251,7 @@
                     </div>
                     <div class="col-md-6 position-relative">
                         <div class="Projectquote-icon">
-                            <img src="./images/quote.png"
-                                alt="" style="object-fit: contain;">
+                            <img src="./images/quote.png" alt="" style="object-fit: contain;">
                         </div>
                         <div class="swiper reviews-swiper">
                             <div class="swiper-wrapper ">
@@ -1151,7 +1259,8 @@
                                     <div class="review-card">
                                         <h5 class="fw-bold">Value Doubled in 2 Years</h5>
                                         <div class="star-rating mb-2">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-                                        <p>“I bought a plot with Gardenia Developers and within 2 years, its value doubled!”</p>
+                                        <p>“I bought a plot with Gardenia Developers and within 2 years, its value
+                                            doubled!”</p>
                                         <strong>Sneha Reddy</strong>
                                         <p class="text-muted">Entrepreneur, Hyderabad</p>
                                     </div>
@@ -1160,7 +1269,9 @@
                                     <div class="review-card">
                                         <h5 class="fw-bold">Best Investment Decision</h5>
                                         <div class="star-rating mb-2">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-                                        <p>“Investing with Gardenia was one of the smartest decisions I made. The location is just 3 minutes from national highway, and I’ve already seen a 30% rise in property value in less than a year.”</p>
+                                        <p>“Investing with Gardenia was one of the smartest decisions I made. The
+                                            location is just 3 minutes from national highway, and I’ve already seen a
+                                            30% rise in property value in less than a year.”</p>
                                         <strong>Ravi Kumar</strong>
                                         <p class="text-muted">IT Professional, Hyderabad</p>
                                     </div>
@@ -1169,7 +1280,10 @@
                                     <div class="review-card">
                                         <h5 class="fw-bold">Perfect for NRIs</h5>
                                         <div class="star-rating mb-2">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-                                        <p>“As an NRI, I was looking for a trustworthy developer who could offer legally clear land close to growth zones. Gardenia Developers handled everything smoothly—from documentation to updates. My plot near the highway has already appreciated by 35% in 18 months!”</p>
+                                        <p>“As an NRI, I was looking for a trustworthy developer who could offer legally
+                                            clear land close to growth zones. Gardenia Developers handled everything
+                                            smoothly—from documentation to updates. My plot near the highway has already
+                                            appreciated by 35% in 18 months!”</p>
                                         <strong>Sravan</strong>
                                         <p class="text-muted">NRI Investor, USA</p>
                                     </div>
@@ -1178,7 +1292,10 @@
                                     <div class="review-card">
                                         <h5 class="fw-bold">Hassle-Free & Transparent</h5>
                                         <div class="star-rating mb-2">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-                                        <p>“I wanted to invest in Indian real estate without the usual risks or delays. Gardenia Developers gave me complete confidence with their transparent process, regular updates, and excellent location choices. It feels great to own land back home that’s actually growing in value.”</p>
+                                        <p>“I wanted to invest in Indian real estate without the usual risks or delays.
+                                            Gardenia Developers gave me complete confidence with their transparent
+                                            process, regular updates, and excellent location choices. It feels great to
+                                            own land back home that’s actually growing in value.”</p>
                                         <strong>Rajender</strong>
                                         <p class="text-muted">NRI Investor, UK</p>
                                     </div>
@@ -1187,48 +1304,20 @@
                                     <div class="review-card">
                                         <h5 class="fw-bold">Smart Long-Term Move</h5>
                                         <div class="star-rating mb-2">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-                                        <p>“We were looking to diversify our asset base and chose Gardenia Developers for their strategic land parcels. Their due diligence, infrastructure planning, and site potential exceeded our expectations. It’s a smart long-term move for us.”</p>
+                                        <p>“We were looking to diversify our asset base and chose Gardenia Developers
+                                            for their strategic land parcels. Their due diligence, infrastructure
+                                            planning, and site potential exceeded our expectations. It’s a smart
+                                            long-term move for us.”</p>
                                         <strong>Vijay Temburi</strong>
                                         <p class="text-muted">CMO, Aiontech Solutions</p>
                                     </div>
                                 </div>
-                                
+
                             </div>
                             <div class="swiper-pagination"></div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
-        <section class="why-invest-section py-5 my-4">
-            <div class="container-lg">
-              <div class="row align-items-center">
-                <!-- Image Column -->
-                <div class="col-md-6 mb-4 mb-md-0 px-md-5">
-                  <img src="./images/bg-image.webp" alt="Why Invest in Gardenia" class="img-fluid rounded shadow">
-                </div>
-                <!-- Content Column -->
-                <div class="col-md-6 p-md-4">
-                  <h2 class="mb-4  project-title" style="text-align: left;"><i class="fa-solid fa-lightbulb text-success me-2 "></i> Why Invest in Gardenia Rajapur ?</h2>
-                  <ul class="list-unstyled">
-                    <li class="mb-2"><i class="fa-solid fa-check text-success me-2"></i> Located in the fastest-growing SEZ belt</li>
-                    <li class="mb-2"><i class="fa-solid fa-check text-success me-2"></i> Surging demand for housing near the employment hub</li>
-                    <li class="mb-2"><i class="fa-solid fa-check text-success me-2"></i> Immediate returns with long-term appreciation potential</li>
-                    <li class="mb-2"><i class="fa-solid fa-check text-success me-2"></i> Developed layout with all civic amenities</li>
-                    <li class="mb-2"><i class="fa-solid fa-check text-success me-2"></i> Peaceful, pollution-free lifestyle close to the city</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </section>
-          
-        <section class="overlay-section">
-            <div class="overlay-content">
-                <h2 class="fw-bold pb-1">Book Your Plot Today</h2>
-                <p class="py-4">Don’t miss your chance to be part of this growth revolution.
-                   <strong> Call now or schedule a site visit</strong> to witness the transformation yourself.
-                    </p>
-                <a href="#" class="enquiry-btn ">CONTACT US</a>
             </div>
         </section>
         <div class="custom-contact-section">
@@ -1278,78 +1367,91 @@
 
         <section class="faq-section py-5 mb-5">
             <div class="container">
-              <h2 class="text-center mb-5 project-title">Frequently Asked Questions (FAQ)</h2>
-              <div class="accordion" id="faqAccordion">
-          
-                <div class="accordion-item">
-                  <h2 class="accordion-header" id="faqOne">
-                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                      Is this project DTCP or HMDA approved?
-                    </button>
-                  </h2>
-                  <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="faqOne" data-bs-parent="#faqAccordion">
-                    <div class="accordion-body">
-                      Yes, Gardenia Rajapur is DTCP approved and legally compliant with all development norms.
+                <h2 class="text-center mb-5 project-title">Frequently Asked Questions (FAQ)</h2>
+                <div class="accordion" id="faqAccordion">
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="faqOne">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                Is this project DTCP or HMDA approved?
+                            </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="faqOne"
+                            data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Yes, Gardenia Rajapur is DTCP approved and legally compliant with all development norms.
+                            </div>
+                        </div>
                     </div>
-                  </div>
-                </div>
-          
-                <div class="accordion-item">
-                  <h2 class="accordion-header" id="faqTwo">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                      Can I construct immediately?
-                    </button>
-                  </h2>
-                  <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="faqTwo" data-bs-parent="#faqAccordion">
-                    <div class="accordion-body">
-                      Absolutely. The plots are ready-to-build with water, electricity, and roads already laid out.
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="faqTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                Can I construct immediately?
+                            </button>
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="faqTwo"
+                            data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Absolutely. The plots are ready-to-build with water, electricity, and roads already laid
+                                out.
+                            </div>
+                        </div>
                     </div>
-                  </div>
-                </div>
-          
-                <div class="accordion-item">
-                  <h2 class="accordion-header" id="faqThree">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                      Do you assist with bank loans?
-                    </button>
-                  </h2>
-                  <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="faqThree" data-bs-parent="#faqAccordion">
-                    <div class="accordion-body">
-                      Yes. Our team will support you in getting personal loan from nationalized and private banks to buy plots.
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="faqThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                Do you assist with bank loans?
+                            </button>
+                        </h2>
+                        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="faqThree"
+                            data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Yes. Our team will support you in getting personal loan from nationalized and private
+                                banks to buy plots.
+                            </div>
+                        </div>
                     </div>
-                  </div>
-                </div>
-          
-                <div class="accordion-item">
-                  <h2 class="accordion-header" id="faqFour">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                      Is this suitable for NRIs?
-                    </button>
-                  </h2>
-                  <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="faqFour" data-bs-parent="#faqAccordion">
-                    <div class="accordion-body">
-                      Yes. We provide end-to-end virtual support and remote documentation services for NRI buyers.
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="faqFour">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                Is this suitable for NRIs?
+                            </button>
+                        </h2>
+                        <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="faqFour"
+                            data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Yes. We provide end-to-end virtual support and remote documentation services for NRI
+                                buyers.
+                            </div>
+                        </div>
                     </div>
-                  </div>
-                </div>
-          
-                <div class="accordion-item">
-                  <h2 class="accordion-header" id="faqFive">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                      Are there any hidden charges?
-                    </button>
-                  </h2>
-                  <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="faqFive" data-bs-parent="#faqAccordion">
-                    <div class="accordion-body">
-                      No hidden costs. All pricing is transparent including registration and maintenance fees.
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="faqFive">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                Are there any hidden charges?
+                            </button>
+                        </h2>
+                        <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="faqFive"
+                            data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                No hidden costs. All pricing is transparent including registration and maintenance fees.
+                            </div>
+                        </div>
                     </div>
-                  </div>
+
                 </div>
-          
-              </div>
             </div>
-          </section>
-          
+        </section>
+
         <!-- accordioan section ends here -->
 
 
@@ -1363,17 +1465,20 @@
                             </div>
                             <p class="py-1 mt-2">Follow Us:</p>
                             <div class="social-icons">
-                                <a target="_blank" href="https://www.facebook.com/profile.php?id=61553000948183 "><i class="fab fa-facebook"></i></a>
-                               <a target="_blank" href="https://www.instagram.com/gardeniadevelopers/"><i class="fab fa-instagram"></i></a>
+                                <a target="_blank" href="https://www.facebook.com/profile.php?id=61553000948183 "><i
+                                        class="fab fa-facebook"></i></a>
+                                <a target="_blank" href="https://www.instagram.com/gardeniadevelopers/"><i
+                                        class="fab fa-instagram"></i></a>
                                 <a href="#"><i class="fab fa-linkedin"></i></a>
-                                <a target="_blank" href=" https://www.youtube.com/@gardeniadevelopers"><i class="fab fa-youtube"></i></a>
+                                <a target="_blank" href=" https://www.youtube.com/@gardeniadevelopers"><i
+                                        class="fab fa-youtube"></i></a>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-3">
                         <div class="footer-Address">
                             <h5>Address</h5>
-                           <div class="d-flex gap-2">
+                            <div class="d-flex gap-2">
                                 <i class="fa-solid fa-location-dot mt-2"></i>
                                 <p class="mt-1">4th Floor, Prabha Plaza,
                                     Prakash Nagar, Above Central Bank of
@@ -1391,7 +1496,7 @@
                         <p><a href="contact.html">Contact</a></p>
                     </div>
                     <div class="col-md-6 col-lg-2 FooterLinks">
-                        <h5>Ongoing Projects</h5>
+                        <h5>Our Projects</h5>
                         <p><a href="Rajapur.html">Rajapur</a></p>
                         <p><a href="Mudireddypally.html">Mudireddypally</a></p>
                     </div>
@@ -1401,9 +1506,9 @@
                                 <div class="icon1">
                                     <i class="fas fa-phone"></i>
                                 </div>
-                                  <div class="contactInfo">
+                                <div class="contactInfo">
                                     <p class="name">PHONE</p>
-                                      <p><a style="color:#065326;" href="tel:+919966764646">+91 9966764646</a></p>
+                                    <p><a style="color:#065326;" href="tel:+919966764646">+91 9966764646</a></p>
                                 </div>
                             </div>
 
@@ -1413,7 +1518,9 @@
                                 </div>
                                 <div class="contactInfo emailSection">
                                     <p>EMAIL ID</p>
-                                    <p class="name"><a style="color:#065326;" href="maitto:info@gardeniadevelopers.com">info@gardeniadevelopers.com</a></p>
+                                    <p class="name"><a style="color:#065326;"
+                                            href="maitto:info@gardeniadevelopers.com">info@gardeniadevelopers.com</a>
+                                    </p>
                                 </div>
                             </div>
                         </div>

@@ -350,19 +350,17 @@ p {
   height: 750px;
 }
 .sectionmage {
-  height: 100%;
+  height:610px;
   width: 100%;
   position: relative;
-  left: -20px;
+  /* left: -20px; */
 }
 .sectionmage img {
   height: 100%;
   width: 100%;
+  /* object-fit:cover; */
 }
-.secondStats {
-  /* left: -15px;
-            width: 105.49%; */
-}
+
 .secondimage {
   left: -30px;
   width: 106.5%;
@@ -930,7 +928,6 @@ p {
     margin-top: 20px;
   }
   .sectionmage {
-    left: 0;
     width: 100%;
   }
   .projectstats {
@@ -1076,8 +1073,8 @@ p {
     margin: 40px auto 0 auto;
   }
   .sectionmage {
-    right: 0;
-    left: 0;
+
+    margin-top: 20px;
   }
   .projectstats {
     left: 0;
@@ -1133,9 +1130,9 @@ p {
     margin: 40px auto 0 auto;
   }
   .sectionmage {
-    left: 0;
     width: 100%;
     height: 500px;
+    margin-top: 20px;
   }
   .sectionmage img {
     object-fit: cover;
@@ -1152,6 +1149,7 @@ p {
     width: 75%;
     margin: 30px auto;
   }
+
 }
 .whyChooseCard{
   transition: all 0.3s linear;
@@ -1190,4 +1188,13 @@ font-size: 12px !important;
 .contactInfo {
   width: 200px;
 }
+}
+
+@media screen and (min-width:992px) and (max-width:1399px){
+    .contactInfo a{
+    font-size: 10px;
+  }
+      .emailIcon {
+        right: -15px;
+    }
 }
