@@ -1176,7 +1176,9 @@ p {
   color: #000 !important;
 
 }
-
+   .contactInfo.emailSection a {
+      text-decoration: none;
+}
 @media screen and (max-width:575px){
   .emailSection .name{
 font-size: 12px !important;
@@ -1190,11 +1192,24 @@ font-size: 12px !important;
 }
 }
 
-@media screen and (min-width:992px) and (max-width:1399px){
+@media screen and (min-width:992px) and (max-width:1199px){
     .contactInfo a{
     font-size: 10px;
   }
       .emailIcon {
-        right: -15px;
+        right: -44px;
     }
+}
+
+@media screen and (min-width:1200px) and (max-width:1399px){
+   .emailIcon {
+        right: -25px;
+    }
+        .contactInfo {
+        width: 220px;
+    }
+    .contactInfo.emailSection a {
+      font-size: 12px;
+      text-decoration: none;
+}
 }

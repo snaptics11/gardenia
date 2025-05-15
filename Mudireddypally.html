@@ -243,20 +243,10 @@
             position: relative;
             padding-block: 50px;
             background-color: #f2f2f2;
+            padding-bottom: 120px;
         }
 
-        .TabsSectionParent::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: url(https://sezcounty.com/wp-content/uploads/2024/02/download-3.png) center/cover no-repeat;
-            background-color: rgba(0, 0, 0, 0.5);
-            z-index: 0;
-            opacity: 0.2;
-        }
+   
 
         .TabsSectionParent>* {
             position: relative;
@@ -491,7 +481,36 @@
     font-size: 18px;
     font-weight: 600;
 }
+.downloadLinks {
+            position: absolute;
+            right: 0;
+            top: 0px;
+            margin-bottom: 20px;
+            justify-content: flex-end;
+        }
+.downloadLinks button {
+            border: 1px solid #000;
+            padding: 5px;
+            background-color: #fdffeb;
+        }
+.downloadLinks a{
+            text-decoration: none;
+            color: #000;
+        }
+        .downloadLinks button:hover a{
+            color: #fff;
+        }
+        .downloadLinks button:hover {
+            color: #fff;
+            background-color: #0F6939;
+            border: none;
+        }
         @media (max-width:768px) {
+                 .downloadLinks {
+                position: relative;
+                justify-content: center;
+
+            }
             .project-info-box {
                 gap: 10px;
             }
@@ -661,6 +680,21 @@
             .aboutProjectLeft img:nth-child(2) {
                 display: none;
             }
+            .downloadLinks {
+                position: relative;
+                justify-content: center;
+
+            }
+        }
+
+        
+        @media screen and (min-width:992px) and (max-width:1200px) {
+            .downloadLinks {
+                position: relative;
+                justify-content: center;
+                padding-bottom: 20px;
+
+            }
         }
     </style>
 </head>
@@ -784,10 +818,17 @@
         </div>
 
         <!-- about project -->
-        <div class="projectDetails">
+        <div class="projectDetails TabsSectionParent">
             <div class="container-lg">
                 <div class="col-lg-11 mx-auto">
                     <div class="row">
+                         <h2 class="fw-bold project-title pb-5 mb-4">PROJECT DETAILS</h2>
+                    <div class="downloadLinks d-flex gap-2">
+
+                        <button><a download href="./images/Gardenia Mudireddipally Flyer-V2.pdf">Download Brochure</a></button>
+                        <button><a href="./images/layout full layout mortigage.pdf">Download Layout</a></button>
+                        <button>Get Directions</button>
+                    </div>
                         <div class="col-md-6">
                             <div class="aboutProjectLeft">
                                 <img src="./images/bg-image.webp"
@@ -974,36 +1015,9 @@
         <!-- Amenities section ends -->
 
         <!-- tabs section  -->
-        <div class="TabsSectionParent">
-            <div class="container text-center mt-4">
-                <h2 class="fw-bold">PROJECT DETAILS</h2>
 
-                <ul class="nav nav-tabs mt-3" id="projectTabs">
-                    <li class="nav-item">
-                        <button class="nav-link active bg-secondary text-white" data-bs-toggle="tab"
-                            data-bs-target="#locationMap">
-                            📍 Location Map
-                        </button>
-                    </li>
-                    <li class="nav-item">
-                        <button class="nav-link bg-dark text-white" data-bs-toggle="tab" data-bs-target="#layoutMap">
-                            📑 Layout Map
-                        </button>
-                    </li>
-                </ul>
+ 
 
-                <div class="tab-content mt-3">
-                    <div class="tab-pane fade show active" id="locationMap">
-                        <img src="./images/mudireddipalli_location.jpg"
-                            alt="Location Map">
-                    </div>
-                    <div class="tab-pane fade" id="layoutMap">
-                        <img src="./images/mudireddypalli_layout.jpg"
-                            alt="Layout Map">
-                    </div>
-                </div>
-            </div>
-        </div>
         <!-- tabs section end    -->
 
         <section class="py-5 bg-light">
@@ -1149,38 +1163,29 @@
         </div>
         <!-- Location Highlights section end-->
 
-        <!-- gallery section -->
-        <div class="GalleryParent">
-            <h2 class="project-title" style="text-transform: uppercase;">Our Gallery</h2>
-
-            <div class="gallery-container">
-                <div class="swiper unique-gallery-swiper py-5">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide"><img src="./images/mudireddipally-images1.jpg" alt="Image 1"></div>
-                        <div class="swiper-slide"><img src="./images/mudireddipally-images2.jpg" alt="Image 2"></div>
-                        <div class="swiper-slide"><img src="./images/mudireddipally-images3.png" alt="Image 3"></div>
-                        <div class="swiper-slide"><img src="./images/mudireddipally-images4.png" alt="Image 4"></div>
-                        <div class="swiper-slide"><img src="./images/Gardenia Mudireddipally Flyer-V2.png" alt="Image 4"></div>
-                        <div class="swiper-slide"><img src="./images/Gardenia Mudireddipally Flyer-V3.png" alt="Image 4"></div>
-                        <div class="swiper-slide"><img src="./images/Gardenia Mudireddipally Flyer-V4.png" alt="Image 4"></div>
-                        <div class="swiper-slide"><img src="./images/Gardenia Mudireddipally Flyer-V5.png" alt="Image 4"></div>
-                        <div class="swiper-slide"><img src="./images/Gardenia Mudireddipally Flyer-V6.png" alt="Image 4"></div>
-                        <div class="swiper-slide"><img src="./images/Gardenia Mudireddipally Flyer-V7.png" alt="Image 4"></div>
-                        <div class="swiper-slide"><img src="./images/development_1.png" alt="Image 4"></div>
-                        <div class="swiper-slide"><img src="./images/development_2.png" alt="Image 4"></div>
-                        <div class="swiper-slide"><img src="./images/development3.png" alt="Image 4"></div>
-                        <!-- <div class="swiper-slide"><img src="./images/development4.png" alt="Image 4"></div>
-                        <div class="swiper-slide"><img src="./images/development5.png" alt="Image 4"></div>
-                        <div class="swiper-slide"><img src="./images/development6.png" alt="Image 4"></div> -->
-       
-                    </div>
-                    <div class="swiper-pagination unique-gallery-pagination"></div>
+            <section class="why-invest-section py-5 my-4">
+            <div class="container-lg">
+              <div class="row align-items-center">
+                <!-- Image Column -->
+                <div class="col-md-6 mb-4 mb-md-0 px-md-5">
+                  <img src="./images/mudireddipally-images3.png" alt="Why Invest in Gardenia" class="img-fluid rounded shadow">
                 </div>
+                <!-- Content Column -->
+                <div class="col-md-6 p-md-4">
+                  <h2 class="mb-4  project-title" style="text-align: left;"><i class="fa-solid fa-lightbulb text-success me-2 "></i> Why Invest in Gardenia Mudireddipally?</h2>
+                  <ul class="list-unstyled">
+                    <li class="mb-2"><i class="fa-solid fa-check text-success me-2"></i> Located in the fastest-growing SEZ belt</li>
+                    <li class="mb-2"><i class="fa-solid fa-check text-success me-2"></i> Surging demand for housing near the employment hub</li>
+                    <li class="mb-2"><i class="fa-solid fa-check text-success me-2"></i> Immediate returns with long-term appreciation potential</li>
+                    <li class="mb-2"><i class="fa-solid fa-check text-success me-2"></i> Developed layout with all civic amenities</li>
+                    <li class="mb-2"><i class="fa-solid fa-check text-success me-2"></i> Peaceful, pollution-free lifestyle close to the city</li>
+                  </ul>
+                </div>
+              </div>
             </div>
-        </div>
+          </section>
 
-        
-        <!-- gallery section end-->
+
         <section class="reviews-section ProjectsPage text-center" style="background-color: #e3ece7;">
             <div class="container">
                 <div class="row align-items-center mt-4">
@@ -1249,27 +1254,39 @@
                 </div>
             </div>
         </section>
-        <section class="why-invest-section py-5 my-4">
-            <div class="container-lg">
-              <div class="row align-items-center">
-                <!-- Image Column -->
-                <div class="col-md-6 mb-4 mb-md-0 px-md-5">
-                  <img src="./images/mudireddipally-images3.png" alt="Why Invest in Gardenia" class="img-fluid rounded shadow">
+    
+
+          
+        <!-- gallery section -->
+        <div class="GalleryParent">
+            <h2 class="project-title" style="text-transform: uppercase;">Our Gallery</h2>
+
+            <div class="gallery-container">
+                <div class="swiper unique-gallery-swiper py-5">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img src="./images/mudireddipally-images1.jpg" alt="Image 1"></div>
+                        <div class="swiper-slide"><img src="./images/mudireddipally-images2.jpg" alt="Image 2"></div>
+                        <div class="swiper-slide"><img src="./images/mudireddipally-images3.png" alt="Image 3"></div>
+                        <div class="swiper-slide"><img src="./images/mudireddipally-images4.png" alt="Image 4"></div>
+                        <div class="swiper-slide"><img src="./images/Gardenia Mudireddipally Flyer-V2.png" alt="Image 4"></div>
+                        <div class="swiper-slide"><img src="./images/Gardenia Mudireddipally Flyer-V3.png" alt="Image 4"></div>
+                        <div class="swiper-slide"><img src="./images/Gardenia Mudireddipally Flyer-V4.png" alt="Image 4"></div>
+                        <div class="swiper-slide"><img src="./images/Gardenia Mudireddipally Flyer-V5.png" alt="Image 4"></div>
+                        <div class="swiper-slide"><img src="./images/Gardenia Mudireddipally Flyer-V6.png" alt="Image 4"></div>
+                        <div class="swiper-slide"><img src="./images/Gardenia Mudireddipally Flyer-V7.png" alt="Image 4"></div>
+                        <div class="swiper-slide"><img src="./images/development_1.png" alt="Image 4"></div>
+                        <div class="swiper-slide"><img src="./images/development_2.png" alt="Image 4"></div>
+                        <div class="swiper-slide"><img src="./images/development3.png" alt="Image 4"></div>
+                        <!-- <div class="swiper-slide"><img src="./images/development4.png" alt="Image 4"></div>
+                        <div class="swiper-slide"><img src="./images/development5.png" alt="Image 4"></div>
+                        <div class="swiper-slide"><img src="./images/development6.png" alt="Image 4"></div> -->
+       
+                    </div>
+                    <div class="swiper-pagination unique-gallery-pagination"></div>
                 </div>
-                <!-- Content Column -->
-                <div class="col-md-6 p-md-4">
-                  <h2 class="mb-4  project-title" style="text-align: left;"><i class="fa-solid fa-lightbulb text-success me-2 "></i> Why Invest in Gardenia Mudireddipally?</h2>
-                  <ul class="list-unstyled">
-                    <li class="mb-2"><i class="fa-solid fa-check text-success me-2"></i> Located in the fastest-growing SEZ belt</li>
-                    <li class="mb-2"><i class="fa-solid fa-check text-success me-2"></i> Surging demand for housing near the employment hub</li>
-                    <li class="mb-2"><i class="fa-solid fa-check text-success me-2"></i> Immediate returns with long-term appreciation potential</li>
-                    <li class="mb-2"><i class="fa-solid fa-check text-success me-2"></i> Developed layout with all civic amenities</li>
-                    <li class="mb-2"><i class="fa-solid fa-check text-success me-2"></i> Peaceful, pollution-free lifestyle close to the city</li>
-                  </ul>
-                </div>
-              </div>
             </div>
-          </section>
+        </div>
+        <!-- gallery section end-->
           
         <section class="overlay-section">
             <div class="overlay-content">
